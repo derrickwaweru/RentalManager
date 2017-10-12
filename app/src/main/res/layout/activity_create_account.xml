@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,15 +7,15 @@
     tools:context="com.example.derrick.rentalmanager.CreateAccountActivity">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="30dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_centerInParent="true"
         android:id="@+id/linearLayout">
 
-        <EditText
+        <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/nameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -25,10 +25,10 @@
             android:padding="10dp"
             android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
-            android:textColorHint="@color/colorDivider"
+            android:textColorHint="@color/colorPrimary"
             android:textSize="20sp" />
 
-        <EditText
+        <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,10 +39,10 @@
             android:padding="10dp"
             android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
-            android:textColorHint="@color/colorDivider"
+            android:textColorHint="@color/colorPrimary"
             android:textSize="20sp" />
 
-        <EditText
+        <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,10 +53,10 @@
             android:padding="10dp"
             android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
-            android:textColorHint="@color/colorDivider"
+            android:textColorHint="@color/colorPrimary"
             android:textSize="20sp" />
 
-        <EditText
+        <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/confirmPasswordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,25 +67,32 @@
             android:padding="10dp"
             android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
-            android:textColorHint="@color/colorDivider"
+            android:textColorHint="@color/colorPrimary"
             android:textSize="20sp" />
 
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/createUserButton"
+            android:text="Sign Up"
+            android:textColor="@android:color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="Sign up"
-            android:background="@color/colorAccent"
-            android:layout_marginTop="15dp"
-            android:textColor="@color/colorTextIcons" />
+            android:layout_margin="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_alignParentBottom="true"
+            app:shadowColor="@android:color/black"
+            app:buttonColor="@color/createUserButton"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"
+            app:cornerRadius="4dp"/>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:textColor="@color/colorTextIcons"
+            android:textColor="@color/colorPrimary"
             android:textStyle="bold"
             android:textSize="15sp"
             android:text="Already have an account? Log in here!"
@@ -98,11 +105,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Account"
-        android:textColor="@color/colorPrimaryLight"
-        android:textSize="30dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:layout_above="@+id/linearLayout"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
 
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
