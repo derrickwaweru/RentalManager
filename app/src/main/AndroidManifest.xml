@@ -19,11 +19,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".ui.CreateAccountActivity" />
         <activity android:name=".ui.AddOwnerActivity" />
         <activity android:name=".ui.OwnerActivity" />
         <activity android:name=".ui.AddManagerActivity" />
         <activity android:name=".ui.ManagerActivity"></activity>
+=======
+        <activity android:name=".CreateAccountActivity" />
+        <activity android:name=".AddOwnerActivity" />
+        <activity android:name=".AddTenantActivity"></activity>
+>>>>>>> db0f98a59b63ba5b126333e327db826bf5b180de
     </application>
 
 </manifest>
