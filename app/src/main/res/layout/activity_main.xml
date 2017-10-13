@@ -13,6 +13,7 @@
         android:layout_marginTop="40dp"
         android:id="@+id/relative1">
 
+
         <ImageView
             android:id="@+id/ownerImageView"
             android:layout_width="100dp"
