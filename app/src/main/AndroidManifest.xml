@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CreateAccountActivity" />
-        <activity android:name=".AddOwnerActivity"></activity>
+        <activity android:name=".AddOwnerActivity" />
+        <activity android:name=".AddTenantActivity"></activity>
     </application>
 
 </manifest>
