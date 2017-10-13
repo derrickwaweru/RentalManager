@@ -1,4 +1,4 @@
-package com.example.derrick.rentalmanager;
+package com.example.derrick.rentalmanager.models;
 
 
 public class AddOwner {

@@ -1,4 +1,4 @@
-package com.example.derrick.rentalmanager;
+package com.example.derrick.rentalmanager.ui;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
