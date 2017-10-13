@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.derrick.rentalmanager.ui.AddManagerActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:text="Add Manager"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeone"
+        android:layout_below="@+id/relative"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/managerImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/manager" />
+
+        <EditText
+            android:id="@+id/managerFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/managerImage"
+            android:hint="First Name"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawablePadding="5dp" />
+
+        <EditText
+            android:id="@+id/managerLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/managerFirstName"
+            android:layout_toRightOf="@+id/managerImage"
+            android:hint="Last Name"
+            android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+            android:drawablePadding="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativetwo"
+        android:layout_below="@+id/relativeone"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/managerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:drawablePadding="5dp" />
+
+        <EditText
+            android:id="@+id/managerPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/managerEmail"
+            android:layout_marginTop="10dp"
+            android:hint="Phone"
+            android:drawableLeft="@drawable/ic_phone_black_24dp"
+            android:drawablePadding="5dp" />
+
+        <EditText
+            android:id="@+id/propertyManaged"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/managerPhone"
+            android:layout_marginTop="10dp"
+            android:hint="Property Managed"
+            android:drawableLeft="@drawable/ic_home_black_24dp"
+            android:drawablePadding="5dp" />
+
+        <EditText
+            android:id="@+id/propertyManagedOwner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/propertyManaged"
+            android:layout_marginTop="10dp"
+            android:hint="Property Owner"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawablePadding="5dp" />
+        <EditText
+            android:id="@+id/propertyManagedAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/propertyManagedOwner"
+            android:layout_marginTop="10dp"
+            android:hint="Property Address"
+            android:drawableLeft="@drawable/ic_local_taxi_black_24dp"
+            android:drawablePadding="5dp" />
+
+        <Button
+            android:id="@+id/addManagerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/propertyManagedAddress"
+            android:text="Add Manager"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@color/colorAccent"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/managerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addManagerBtn"
+            android:layout_marginTop="10dp"
+            android:text="Already a Manager? Click Here"
+            android:layout_marginLeft="70dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary" />
+    </RelativeLayout>
+</RelativeLayout>
