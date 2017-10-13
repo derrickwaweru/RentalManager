@@ -22,7 +22,8 @@
         <activity android:name=".ui.CreateAccountActivity" />
         <activity android:name=".ui.AddOwnerActivity" />
         <activity android:name=".ui.OwnerActivity" />
-        <activity android:name=".ui.AddManagerActivity"></activity>
+        <activity android:name=".ui.AddManagerActivity" />
+        <activity android:name=".ui.ManagerActivity"></activity>
     </application>
 
 </manifest>
