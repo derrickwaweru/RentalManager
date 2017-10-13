@@ -2,6 +2,7 @@ package com.example.derrick.rentalmanager;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,7 +21,7 @@ public class AddOwnerActivity extends AppCompatActivity implements View.OnClickL
     @Bind(R.id.ownerPhoneEditText) EditText mOwnerPhone;
     @Bind(R.id.addOwnerBtn) Button mAddOwnerBtn;
 
-    DatabaseReference rootRef, ownerRef;
+    DatabaseReference databaseOwners;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,23 +31,50 @@ public class AddOwnerActivity extends AppCompatActivity implements View.OnClickL
 
         mAddOwnerBtn.setOnClickListener(this);
 
-        rootRef = FirebaseDatabase.getInstance().getReference();
-        ownerRef = rootRef.child("owners");
+        //getting the reference of owners node
+        databaseOwners = FirebaseDatabase.getInstance().getReference("owners");
 
     }
 
     @Override
     public void onClick(View v) {
         if(v == mAddOwnerBtn) {
-            String firstName = mOwnerFirstName.getText().toString();
-            ownerRef.push().setValue(firstName);
-            String lastName = mOwnerLastName.getText().toString();
-            ownerRef.push().setValue(lastName);
-            String email = mOwnerEmail.getText().toString();
-            ownerRef.push().setValue(email);
-            String phone = mOwnerPhone.getText().toString();
-            ownerRef.push().setValue(phone);
+            addOwner();
+        }
+    }
+
+    private void addOwner() {
+        //getting the values to save
+        String firstName = mOwnerFirstName.getText().toString().trim();
+        String lastName = mOwnerLastName.getText().toString().trim();
+        String email = mOwnerEmail.getText().toString().trim();
+        String phone = mOwnerPhone.getText().toString().trim();
+
+        //checking if the value is provided
+        if(!TextUtils.isEmpty(firstName)) {
+
+
+            //getting a unique id using push().getKey() method
+            //it will create a unique id and we will use it as the Primary Key for our owner
+            String id = databaseOwners.push().getKey();
+
+            //creating owner Object
+            AddOwner addOwner = new AddOwner(firstName, lastName, email, phone);
+
+            //Saving the owner
+            databaseOwners.child(id).setValue(addOwner);
+
+            //setting edittexts to blank again
+            mOwnerFirstName.setText("");
+            mOwnerLastName.setText("");
+            mOwnerEmail.setText("");
+            mOwnerPhone.setText("");
+
+            //displaying a success toast
             Toast.makeText(this, "Owner Added!", Toast.LENGTH_SHORT).show();
+        } else {
+            //if the value is not given displaying a toast
+            Toast.makeText(this, "Please fill the form!", Toast.LENGTH_SHORT).show();
         }
     }
 
