@@ -1,7 +1,7 @@
-package com.example.derrick.rentalmanager;
+package com.example.derrick.rentalmanager.ui;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -9,19 +9,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.derrick.rentalmanager.models.AddTenant;
+import com.example.derrick.rentalmanager.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-
-import static com.example.derrick.rentalmanager.R.id.nameEditText;
-
-import static com.example.derrick.rentalmanager.R.id.tenantFirstNameEditText;
-import static com.example.derrick.rentalmanager.R.id.tenantLastNameEditText;
-import static com.example.derrick.rentalmanager.R.id.tenantRoomNumberEditText;
-import static com.example.derrick.rentalmanager.R.id.tenantEmailEditText;
-import static com.example.derrick.rentalmanager.R.id.tenantPhoneEditText;
 
 
 public class AddTenantActivity extends AppCompatActivity implements View.OnClickListener {
