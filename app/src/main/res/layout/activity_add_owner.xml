@@ -109,7 +109,7 @@
             android:layout_marginTop="20dp"
             android:text="Already an owner? Click Here!"
             android:textSize="18sp"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:layout_marginLeft="80dp"/>
 

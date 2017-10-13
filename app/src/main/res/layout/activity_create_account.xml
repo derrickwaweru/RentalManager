@@ -25,7 +25,7 @@
             android:padding="10dp"
             android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
-            android:textColorHint="@color/colorPrimary"
+            android:textColorHint="@color/colorAccent"
             android:textSize="20sp" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
@@ -39,7 +39,7 @@
             android:padding="10dp"
             android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
-            android:textColorHint="@color/colorPrimary"
+            android:textColorHint="@color/colorAccent"
             android:textSize="20sp" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
@@ -53,7 +53,7 @@
             android:padding="10dp"
             android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
-            android:textColorHint="@color/colorPrimary"
+            android:textColorHint="@color/colorAccent"
             android:textSize="20sp" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
@@ -67,7 +67,7 @@
             android:padding="10dp"
             android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
-            android:textColorHint="@color/colorPrimary"
+            android:textColorHint="@color/colorAccent"
             android:textSize="20sp" />
 
 
@@ -92,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:textSize="15sp"
             android:text="Already have an account? Log in here!"
@@ -105,7 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Account"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorAccent"
         android:textSize="30sp"
         android:textStyle="bold"
         android:layout_above="@+id/linearLayout"
