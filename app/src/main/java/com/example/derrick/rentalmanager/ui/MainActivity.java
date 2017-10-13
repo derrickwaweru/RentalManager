@@ -20,6 +20,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     @Bind(R.id.ownerImageView) ImageView mOwnerImageView;
+    @Bind(R.id.managerImageView) ImageView mManagerImageView;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
 
         mOwnerImageView.setOnClickListener(this);
+        mManagerImageView.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener(){
@@ -93,6 +95,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if(v == mOwnerImageView) {
             Intent intent = new Intent(MainActivity.this, AddOwnerActivity.class);
+            startActivity(intent);
+        }
+        if(v == mManagerImageView) {
+            Intent intent = new Intent(MainActivity.this, AddManagerActivity.class);
             startActivity(intent);
         }
     }
