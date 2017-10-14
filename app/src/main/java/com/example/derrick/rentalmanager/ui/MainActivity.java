@@ -22,12 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Bind(R.id.ownerImageView) ImageView mOwnerImageView;
     @Bind(R.id.managerImageView) ImageView mManagerImageView;
     @Bind(R.id.tenantsImageView) ImageView mTenantsImageView;
-//    @Bind(R.id.addTenantBtn) Button mAddTenantBtn;
-//    @Bind(R.id.nameEditText) EditText mNameEditText;
-//    @Bind(R.id.tenantEmailEditText) EditText mTenantEmailEditText;
-//    @Bind(R.id.tenantFirstNameEditText) EditText mFirstNameEditText;
-//    @Bind(R.id.tenantPhoneEditText) EditText mTenantPhoneEditText;
-//    @Bind(R.id.tenantRoomNumberEditText) EditText mtenantRoomNumberEditText;
+    @Bind(R.id.reportsImageView) ImageView mReportsImageView;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
@@ -42,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mOwnerImageView.setOnClickListener(this);
         mManagerImageView.setOnClickListener(this);
         mTenantsImageView.setOnClickListener(this);
+        mReportsImageView.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener(){
@@ -114,6 +110,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (v == mTenantsImageView) {
             Intent intent = new Intent(MainActivity.this, AddTenantActivity.class);
+            startActivity(intent);
+        }
+        if(v == mReportsImageView) {
+            Intent intent = new Intent(MainActivity.this, AddReportsActivity.class);
             startActivity(intent);
         }
     }
