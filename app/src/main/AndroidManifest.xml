@@ -25,7 +25,8 @@
         <activity android:name=".ui.AddManagerActivity" />
         <activity android:name=".ui.ManagerActivity" />
         <activity android:name=".ui.AddTenantActivity" />
-        <activity android:name=".ui.AddReportsActivity"></activity>
+        <activity android:name=".ui.AddReportsActivity" />
+        <activity android:name=".ui.ReportsActivity"></activity>
     </application>
 
 </manifest>
