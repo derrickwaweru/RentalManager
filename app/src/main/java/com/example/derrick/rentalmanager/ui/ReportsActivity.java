@@ -3,6 +3,9 @@ package com.example.derrick.rentalmanager.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.example.derrick.rentalmanager.R;
@@ -36,6 +39,24 @@ public class ReportsActivity extends AppCompatActivity {
 
         reports = new ArrayList<>();
         databaseReports = FirebaseDatabase.getInstance().getReference("reports");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_add_reports, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if(id == R.id.action_add_report) {
+            Intent intent = new Intent(ReportsActivity.this, AddReportsActivity.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

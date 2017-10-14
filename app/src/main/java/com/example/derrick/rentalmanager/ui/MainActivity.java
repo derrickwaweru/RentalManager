@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }
         if(v == mReportsImageView) {
-            Intent intent = new Intent(MainActivity.this, AddReportsActivity.class);
+            Intent intent = new Intent(MainActivity.this, ReportsActivity.class);
             startActivity(intent);
         }
     }

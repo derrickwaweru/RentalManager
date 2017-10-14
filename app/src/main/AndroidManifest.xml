@@ -25,8 +25,16 @@
         <activity android:name=".ui.AddManagerActivity" />
         <activity android:name=".ui.ManagerActivity" />
         <activity android:name=".ui.AddTenantActivity" />
-        <activity android:name=".ui.AddReportsActivity" />
-        <activity android:name=".ui.ReportsActivity"></activity>
+        <activity android:name=".ui.AddReportsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.derrick.rentalmanager.ui.ReportsActivity" />
+        </activity>
+        <activity android:name=".ui.ReportsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.derrick.rentalmanager.ui.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
