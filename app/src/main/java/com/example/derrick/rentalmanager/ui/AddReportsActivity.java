@@ -14,6 +14,9 @@ import com.example.derrick.rentalmanager.models.AddReports;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -26,6 +29,7 @@ public class AddReportsActivity extends AppCompatActivity implements View.OnClic
     @Bind(R.id.roomNumberEditText) EditText mRoomNumber;
     @Bind(R.id.sumbitReportBtn) Button mSubmitReportBtn;
 
+    List<AddReports> reports;
     DatabaseReference databaseReports;
 
     @Override
@@ -39,6 +43,8 @@ public class AddReportsActivity extends AppCompatActivity implements View.OnClic
         mSubmitReportBtn.setOnClickListener(this);
 
         databaseReports = FirebaseDatabase.getInstance().getReference("reports");
+
+        reports = new ArrayList<>();
     }
 
     @Override

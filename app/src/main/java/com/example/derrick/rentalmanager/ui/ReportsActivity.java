@@ -3,16 +3,64 @@ package com.example.derrick.rentalmanager.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ListView;
 
 import com.example.derrick.rentalmanager.R;
+import com.example.derrick.rentalmanager.models.AddReports;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class ReportsActivity extends AppCompatActivity {
+    @Bind(R.id.listViewReports)
+    ListView mListViewReports;
+
+    DatabaseReference databaseReports;
+    List<AddReports> reports;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reports);
+        ButterKnife.bind(this);
 
         Intent intent = getIntent();
+
+        reports = new ArrayList<>();
+        databaseReports = FirebaseDatabase.getInstance().getReference("reports");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        databaseReports.addValueEventListener(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                reports.clear();
+
+                for(DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    AddReports report = postSnapshot.getValue(AddReports.class);
+                    reports.add(report);
+                }
+
+                ReportsList reportsAdapter = new ReportsList(ReportsActivity.this, reports);
+                mListViewReports.setAdapter(reportsAdapter);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 }
