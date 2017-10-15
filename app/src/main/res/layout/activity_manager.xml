@@ -1,9 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.derrick.rentalmanager.ui.ManagerActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstRelative"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/managerReportsImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/newspaper" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reports"
+            android:layout_below="@+id/managerReportsImageView"
+            android:layout_marginLeft="30dp"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/managerTenants"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/family"
+            android:layout_toRightOf="@+id/managerReportsImageView"
+            android:layout_marginLeft="50dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tenants"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/managerTenants"
+            android:layout_marginLeft="220dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstRelative"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:id="@+id/workersImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/workers" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Workers"
+            android:layout_below="@+id/workersImageView"
+            android:layout_marginLeft="20dp"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/managerPayments"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/notes"
+            android:layout_toRightOf="@id/workersImageView"
+            android:layout_marginLeft="50dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/managerPayments"
+            android:layout_marginLeft="220dp"
+            android:text="Payments"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</RelativeLayout>
