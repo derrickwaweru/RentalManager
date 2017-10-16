@@ -20,9 +20,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.CreateAccountActivity" />
-        <activity android:name=".ui.AddOwnerActivity" />
+        <activity android:name=".ui.AddOwnerActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.derrick.rentalmanager.ui.MainActivity" />
+        </activity>
         <activity android:name=".ui.OwnerActivity" />
-        <activity android:name=".ui.AddManagerActivity" />
+        <activity android:name=".ui.AddManagerActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.derrick.rentalmanager.ui.MainActivity" />
+        </activity>
         <activity android:name=".ui.ManagerActivity" />
         <activity android:name=".ui.AddTenantActivity" />
         <activity android:name=".ui.TenantActivity" />
@@ -38,6 +46,12 @@
         </activity>
         <activity android:name=".ui.AddPropertyActivity" />
         <activity android:name=".ui.PropertyActivity"></activity>
+        <activity android:name=".ui.AddWorkersActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.derrick.rentalmanager.ui.WorkersActivity" />
+        </activity>
+        <activity android:name=".ui.WorkersActivity"></activity>
     </application>
 
 </manifest>

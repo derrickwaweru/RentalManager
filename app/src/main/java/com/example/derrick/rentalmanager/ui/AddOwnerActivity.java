@@ -91,9 +91,7 @@ public class AddOwnerActivity extends AppCompatActivity implements View.OnClickL
 
         //Once the form is filled, a new activity is started
         Intent intent = new Intent(AddOwnerActivity.this, OwnerActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
-        finish();
     }
 
 }

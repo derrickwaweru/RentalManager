@@ -7,12 +7,12 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-
 import com.example.derrick.rentalmanager.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -33,6 +33,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     @Bind(R.id.ownerImageView) ImageView mOwnerImageView;
     @Bind(R.id.managerImageView) ImageView mManagerImageView;
@@ -41,6 +44,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Bind(R.id.propertyImageView) ImageView mPropertyImageView;
 //    private TextView mAppNameTextView;
 
+//    @Bind(R.id.addTenantBtn) Button mAddTenantBtn;
+//    @Bind(R.id.nameEditText) EditText mNameEditText;
+//    @Bind(R.id.tenantEmailEditText) EditText mTenantEmailEditText;
+//    @Bind(R.id.tenantFirstNameEditText) EditText mFirstNameEditText;
+//    @Bind(R.id.tenantPhoneEditText) EditText mTenantPhoneEditText;
+//    @Bind(R.id.tenantRoomNumberEditText) EditText mtenantRoomNumberEditText;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 

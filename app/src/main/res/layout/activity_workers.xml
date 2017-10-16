@@ -4,22 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.derrick.rentalmanager.ui.ReportsActivity">
+    tools:context="com.example.derrick.rentalmanager.ui.WorkersActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="List of Reports"
-        android:textSize="20sp"
+        android:id="@+id/workerListTextView"
+        android:text="Workers List"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:id="@+id/reportListTextView"
-        android:layout_marginLeft="110dp"
-        android:textColor="@color/colorAccent" />
+        android:textColor="@color/colorAccent"
+        android:layout_marginLeft="100dp" />
 
     <ListView
-        android:id="@+id/listViewReports"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/reportListTextView"></ListView>
+        android:id="@+id/workersListView"
+        android:layout_below="@+id/workerListTextView" >
+
+    </ListView>
 </RelativeLayout>

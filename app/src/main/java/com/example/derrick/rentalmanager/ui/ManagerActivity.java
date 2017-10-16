@@ -26,12 +26,17 @@ public class ManagerActivity extends AppCompatActivity implements View.OnClickLi
         Intent intent = getIntent();
 
         mManagerReports.setOnClickListener(this);
+        mWorkersImageView.setOnClickListener(this);
     }
 
     @Override
     public void  onClick(View v) {
         if(v == mManagerReports) {
             Intent intent = new Intent(ManagerActivity.this, ReportsActivity.class);
+            startActivity(intent);
+        }
+        if(v == mWorkersImageView) {
+           Intent intent = new Intent(ManagerActivity.this, WorkersActivity.class);
             startActivity(intent);
         }
     }

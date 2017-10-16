@@ -26,7 +26,7 @@ public class ReportsList extends ArrayAdapter<AddReports> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
         LayoutInflater inflater=context.getLayoutInflater();
-        View listViewItem=inflater.inflate(R.layout.reports_list,null,true);
+        View listViewItem = inflater.inflate(R.layout.reports_list,null,true);
 
         TextView fromTextView = (TextView) listViewItem.findViewById(R.id.fromTextView);
         TextView toTextView = (TextView) listViewItem.findViewById(R.id.toTextView);
