@@ -43,7 +43,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.derrick.rentalmanager.ui.MainActivity" />
         </activity>
-        <activity android:name=".ui.AddWorkersActivity" />
+        <activity android:name=".ui.AddWorkersActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.derrick.rentalmanager.ui.WorkersActivity" />
+        </activity>
         <activity android:name=".ui.WorkersActivity"></activity>
     </application>
 
