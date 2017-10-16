@@ -4,60 +4,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-<<<<<<< HEAD
-=======
-import android.os.Bundle;
-import android.text.TextUtils;
->>>>>>> eecbb90b0fbabcd1d8dd91e351ad47e3b1ce8499
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-
 import com.example.derrick.rentalmanager.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-<<<<<<< HEAD
-=======
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import butterknife.ButterKnife;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.Toast;
->>>>>>> eecbb90b0fbabcd1d8dd91e351ad47e3b1ce8499
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-
-<<<<<<< HEAD
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     @Bind(R.id.ownerImageView) ImageView mOwnerImageView;
     @Bind(R.id.managerImageView) ImageView mManagerImageView;
     @Bind(R.id.tenantsImageView) ImageView mTenantsImageView;
     @Bind(R.id.reportsImageView) ImageView mReportsImageView;
-=======
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    @Bind(R.id.ownerImageView)
-    ImageView mOwnerImageView;
-    @Bind(R.id.managerImageView)
-    ImageView mManagerImageView;
-    @Bind(R.id.tenantsImageView)
-    ImageView mTenantsImageView;
 //    @Bind(R.id.addTenantBtn) Button mAddTenantBtn;
 //    @Bind(R.id.nameEditText) EditText mNameEditText;
 //    @Bind(R.id.tenantEmailEditText) EditText mTenantEmailEditText;
 //    @Bind(R.id.tenantFirstNameEditText) EditText mFirstNameEditText;
 //    @Bind(R.id.tenantPhoneEditText) EditText mTenantPhoneEditText;
 //    @Bind(R.id.tenantRoomNumberEditText) EditText mtenantRoomNumberEditText;
->>>>>>> eecbb90b0fbabcd1d8dd91e351ad47e3b1ce8499
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
@@ -70,11 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mOwnerImageView.setOnClickListener(this);
         mManagerImageView.setOnClickListener(this);
         mTenantsImageView.setOnClickListener(this);
-<<<<<<< HEAD
         mReportsImageView.setOnClickListener(this);
-=======
-
->>>>>>> eecbb90b0fbabcd1d8dd91e351ad47e3b1ce8499
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -147,7 +111,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (v == mTenantsImageView) {
             Intent intent = new Intent(MainActivity.this, AddTenantActivity.class);
-<<<<<<< HEAD
             startActivity(intent);
         }
         if(v == mReportsImageView) {
@@ -156,10 +119,3 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 }
-=======
-            startActivity(intent);
-        }
-    }
-
-}
->>>>>>> eecbb90b0fbabcd1d8dd91e351ad47e3b1ce8499

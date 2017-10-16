@@ -86,8 +86,6 @@ public class AddManagerActivity extends AppCompatActivity implements View.OnClic
         }
 
         Intent intent = new Intent(AddManagerActivity.this, ManagerActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
-        finish();
     }
 }

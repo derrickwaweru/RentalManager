@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.derrick.rentalmanager.ui.AddWorkersActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add A Worker"
+            android:layout_marginLeft="100dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative1"
+        android:layout_marginTop="100dp">
+
+        <ImageView
+            android:id="@+id/workers"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/workers" />
+
+        <EditText
+            android:id="@+id/workersFirstNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/workers"
+            android:hint="First Name"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawablePadding="5dp" />
+
+        <EditText
+            android:id="@+id/workersLastNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/workersFirstNameEditText"
+            android:layout_toRightOf="@+id/workers"
+            android:layout_marginTop="15dp"
+            android:hint="Last Name"
+            android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+            android:drawablePadding="5dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative2"
+        android:layout_below="@+id/relative1"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/workersProfession"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Profession"
+            android:drawableLeft="@drawable/ic_build_black_24dp"
+            android:drawablePadding="5dp" />
+
+        <EditText
+            android:id="@+id/workersPhoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/workersProfession"
+            android:layout_marginTop="15dp"
+            android:hint="Phone Number"
+            android:drawableLeft="@drawable/ic_phone_black_24dp"
+            android:drawablePadding="5dp" />
+
+        <EditText
+            android:id="@+id/workersSalaryEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/workersPhoneEditText"
+            android:layout_marginTop="15dp"
+            android:hint="Salary"
+            android:drawableLeft="@drawable/ic_attach_money_black_24dp"
+            android:drawablePadding="5dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/workersSalaryEditText"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorAccent"
+            android:text="Add Worker"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</RelativeLayout>

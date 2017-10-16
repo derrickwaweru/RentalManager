@@ -16,6 +16,7 @@
         android:id="@+id/reportListTextView"
         android:layout_marginLeft="110dp"
         android:textColor="@color/colorAccent" />
+
     <ListView
         android:id="@+id/listViewReports"
         android:layout_width="match_parent"
