@@ -23,9 +23,9 @@
         <activity android:name=".ui.AddOwnerActivity" />
         <activity android:name=".ui.OwnerActivity" />
         <activity android:name=".ui.AddManagerActivity" />
-        <activity android:name=".ui.ManagerActivity"></activity>
-
-        <activity android:name=".ui.AddTenantActivity"></activity>
+        <activity android:name=".ui.ManagerActivity" />
+        <activity android:name=".ui.AddTenantActivity" />
+        <activity android:name=".ui.TenantActivity" />
     </application>
 
 </manifest>

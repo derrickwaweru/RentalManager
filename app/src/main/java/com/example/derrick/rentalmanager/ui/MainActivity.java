@@ -1,6 +1,7 @@
 package com.example.derrick.rentalmanager.ui;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -25,6 +26,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import butterknife.Bind;
@@ -39,6 +41,7 @@ import static com.example.derrick.rentalmanager.R.id.tenantRoomNumberEditText;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private TextView mAppNameTextView;
     @Bind(R.id.ownerImageView)
     ImageView mOwnerImageView;
     @Bind(R.id.managerImageView)
@@ -63,6 +66,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mOwnerImageView.setOnClickListener(this);
         mManagerImageView.setOnClickListener(this);
         mTenantsImageView.setOnClickListener(this);
+
+        mAppNameTextView = (TextView) findViewById(R.id.appNameTextView);
+        Typeface ostrichFont = Typeface.createFromAsset(getAssets(), "fonts/ostrich-regular.ttf");
+        mAppNameTextView.setTypeface(ostrichFont);
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -135,7 +142,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }
         if (v == mTenantsImageView) {
-            Intent intent = new Intent(MainActivity.this, AddTenantActivity.class);
+            Intent intent = new Intent(MainActivity.this, TenantActivity.class);
             startActivity(intent);
         }
     }
