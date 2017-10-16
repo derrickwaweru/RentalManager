@@ -36,7 +36,7 @@ public class ManagerActivity extends AppCompatActivity implements View.OnClickLi
             startActivity(intent);
         }
         if(v == mWorkersImageView) {
-           Intent intent = new Intent(ManagerActivity.this, AddWorkersActivity.class);
+           Intent intent = new Intent(ManagerActivity.this, WorkersActivity.class);
             startActivity(intent);
         }
     }

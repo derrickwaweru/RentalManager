@@ -14,6 +14,9 @@ import com.example.derrick.rentalmanager.models.AddWorkers;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -27,6 +30,7 @@ public class AddWorkersActivity extends AppCompatActivity implements View.OnClic
     @Bind(R.id.addWorkers) Button mAddWorkersBtn;
 
     DatabaseReference databaseWorkers;
+    List<AddWorkers> workers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +38,13 @@ public class AddWorkersActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_add_workers);
         ButterKnife.bind(this);
 
-        databaseWorkers = FirebaseDatabase.getInstance().getReference("Workers");
+        databaseWorkers = FirebaseDatabase.getInstance().getReference("workers");
 
         Intent intent = getIntent();
 
         mAddWorkersBtn.setOnClickListener(this);
+
+        workers = new ArrayList<>();
     }
 
     @Override
@@ -60,6 +66,8 @@ public class AddWorkersActivity extends AppCompatActivity implements View.OnClic
             String id = databaseWorkers.push().getKey();
 
             AddWorkers addWorkers = new AddWorkers(firstName, lastName, profession, phone, salary, worksAt);
+
+            databaseWorkers.child(id).setValue(addWorkers);
 
             Toast.makeText(this, "Worker Added", Toast.LENGTH_SHORT).show();
         } else {

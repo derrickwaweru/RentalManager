@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.derrick.rentalmanager.ui.WorkersActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/workerListTextView"
+        android:text="Workers List"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:layout_marginLeft="100dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/workersListView"
+        android:layout_below="@+id/workerListTextView" >
+
+    </ListView>
+</RelativeLayout>
