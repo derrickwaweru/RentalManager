@@ -1,4 +1,4 @@
-package com.example.derrick.rentalmanager;
+package com.example.derrick.rentalmanager.ui;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.example.derrick.rentalmanager.R;
 import com.example.derrick.rentalmanager.models.AddTenant;
 
 import java.util.List;

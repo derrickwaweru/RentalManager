@@ -32,28 +32,15 @@ import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-import static com.example.derrick.rentalmanager.R.id.nameEditText;
-import static com.example.derrick.rentalmanager.R.id.tenantEmailEditText;
-import static com.example.derrick.rentalmanager.R.id.tenantFirstNameEditText;
-import static com.example.derrick.rentalmanager.R.id.tenantLastNameEditText;
-import static com.example.derrick.rentalmanager.R.id.tenantPhoneEditText;
-import static com.example.derrick.rentalmanager.R.id.tenantRoomNumberEditText;
 
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    @Bind(R.id.ownerImageView) ImageView mOwnerImageView;
+    @Bind(R.id.managerImageView) ImageView mManagerImageView;
+    @Bind(R.id.tenantsImageView) ImageView mTenantsImageView;
+    @Bind(R.id.reportsImageView) ImageView mReportsImageView;
+    @Bind(R.id.propertyImageView) ImageView mPropertyImageView;
+//    private TextView mAppNameTextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private TextView mAppNameTextView;
-    @Bind(R.id.ownerImageView)
-    ImageView mOwnerImageView;
-    @Bind(R.id.managerImageView)
-    ImageView mManagerImageView;
-    @Bind(R.id.tenantsImageView)
-    ImageView mTenantsImageView;
-//    @Bind(R.id.addTenantBtn) Button mAddTenantBtn;
-//    @Bind(R.id.nameEditText) EditText mNameEditText;
-//    @Bind(R.id.tenantEmailEditText) EditText mTenantEmailEditText;
-//    @Bind(R.id.tenantFirstNameEditText) EditText mFirstNameEditText;
-//    @Bind(R.id.tenantPhoneEditText) EditText mTenantPhoneEditText;
-//    @Bind(R.id.tenantRoomNumberEditText) EditText mtenantRoomNumberEditText;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
@@ -66,10 +53,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mOwnerImageView.setOnClickListener(this);
         mManagerImageView.setOnClickListener(this);
         mTenantsImageView.setOnClickListener(this);
+        mReportsImageView.setOnClickListener(this);
+        mPropertyImageView.setOnClickListener(this);
 
-        mAppNameTextView = (TextView) findViewById(R.id.appNameTextView);
-        Typeface ostrichFont = Typeface.createFromAsset(getAssets(), "fonts/ostrich-regular.ttf");
-        mAppNameTextView.setTypeface(ostrichFont);
+//        mAppNameTextView = (TextView) findViewById(R.id.appNameTextView);
+//        Typeface ostrichFont = Typeface.createFromAsset(getAssets(), "fonts/ostrich-regular.ttf");
+//        mAppNameTextView.setTypeface(ostrichFont);
+
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -143,8 +133,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (v == mTenantsImageView) {
             Intent intent = new Intent(MainActivity.this, TenantActivity.class);
+
+            startActivity(intent);
+        }
+        if(v == mReportsImageView) {
+            Intent intent = new Intent(MainActivity.this, ReportsActivity.class);
+            startActivity(intent);
+        }
+        if(v == mPropertyImageView) {
+            Intent intent = new Intent(MainActivity.this, PropertyActivity.class);
             startActivity(intent);
         }
     }
-
 }
+

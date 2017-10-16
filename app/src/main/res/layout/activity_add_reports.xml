@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.derrick.rentalmanager.ui.AddReportsActivity"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:text="Add A Report"
+            android:textSize="30sp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel1"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/calendar"
+            android:id="@+id/calender"/>
+
+        <EditText
+            android:id="@+id/fromEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/calender"
+            android:layout_marginTop="25dp"
+            android:hint="From" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/calender"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/calendar"
+            android:id="@+id/calender2" />
+
+        <EditText
+            android:id="@+id/toEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/calender2"
+            android:layout_below="@+id/fromEditText"
+            android:layout_marginTop="30dp"
+            android:hint="To" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel2"
+        android:layout_below="@+id/rel1"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/financial"
+            android:id="@+id/report" />
+
+        <EditText
+            android:id="@+id/reportTypeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/report"
+            android:layout_marginTop="10dp"
+            android:hint="Report Type" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/report"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/financial"
+            android:id="@+id/report2" />
+
+        <EditText
+            android:id="@+id/reportDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reportTypeEditText"
+            android:layout_toRightOf="@+id/report2"
+            android:layout_marginTop="18dp"
+            android:hint="Report Description" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/report2"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/icon"
+            android:id="@+id/building" />
+
+        <EditText
+            android:id="@+id/buildingReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reportDescription"
+            android:layout_toRightOf="@+id/building"
+            android:layout_marginTop="22dp"
+            android:hint="Property Name" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/building"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/room"
+            android:id="@+id/room" />
+
+        <EditText
+            android:id="@+id/roomNumberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buildingReport"
+            android:layout_toRightOf="@+id/room"
+            android:layout_marginTop="22dp"
+            android:hint="Room Number" />
+
+        <Button
+            android:id="@+id/sumbitReportBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:layout_below="@id/roomNumberEditText"
+            android:layout_marginTop="20dp"
+            android:text="Submit Report"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+</RelativeLayout>
