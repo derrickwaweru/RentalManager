@@ -1,9 +1,13 @@
 package com.example.derrick.rentalmanager.ui;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.TextUtils;
+
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -12,6 +16,23 @@ import android.widget.ImageView;
 import com.example.derrick.rentalmanager.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import butterknife.ButterKnife;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -20,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Bind(R.id.managerImageView) ImageView mManagerImageView;
     @Bind(R.id.tenantsImageView) ImageView mTenantsImageView;
     @Bind(R.id.reportsImageView) ImageView mReportsImageView;
+    @Bind(R.id.propertyImageView) ImageView mPropertyImageView;
+//    private TextView mAppNameTextView;
+
 //    @Bind(R.id.addTenantBtn) Button mAddTenantBtn;
 //    @Bind(R.id.nameEditText) EditText mNameEditText;
 //    @Bind(R.id.tenantEmailEditText) EditText mTenantEmailEditText;
@@ -39,6 +63,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mManagerImageView.setOnClickListener(this);
         mTenantsImageView.setOnClickListener(this);
         mReportsImageView.setOnClickListener(this);
+        mPropertyImageView.setOnClickListener(this);
+
+//        mAppNameTextView = (TextView) findViewById(R.id.appNameTextView);
+//        Typeface ostrichFont = Typeface.createFromAsset(getAssets(), "fonts/ostrich-regular.ttf");
+//        mAppNameTextView.setTypeface(ostrichFont);
+
+
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -110,12 +141,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }
         if (v == mTenantsImageView) {
-            Intent intent = new Intent(MainActivity.this, AddTenantActivity.class);
+            Intent intent = new Intent(MainActivity.this, TenantActivity.class);
+
             startActivity(intent);
         }
         if(v == mReportsImageView) {
             Intent intent = new Intent(MainActivity.this, ReportsActivity.class);
             startActivity(intent);
         }
+        if(v == mPropertyImageView) {
+            Intent intent = new Intent(MainActivity.this, PropertyActivity.class);
+            startActivity(intent);
+        }
     }
 }
+

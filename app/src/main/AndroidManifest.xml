@@ -33,6 +33,7 @@
         </activity>
         <activity android:name=".ui.ManagerActivity" />
         <activity android:name=".ui.AddTenantActivity" />
+        <activity android:name=".ui.TenantActivity" />
         <activity android:name=".ui.AddReportsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -43,6 +44,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.derrick.rentalmanager.ui.MainActivity" />
         </activity>
+        <activity android:name=".ui.AddPropertyActivity" />
+        <activity android:name=".ui.PropertyActivity"></activity>
         <activity android:name=".ui.AddWorkersActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
