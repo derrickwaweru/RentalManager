@@ -1,37 +1,18 @@
 package com.example.derrick.rentalmanager.ui;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.text.TextUtils;
-
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+
 import com.example.derrick.rentalmanager.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import butterknife.ButterKnife;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import butterknife.Bind;
-import butterknife.ButterKnife;
-
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -133,11 +114,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         if (v == mOwnerImageView) {
-            Intent intent = new Intent(MainActivity.this, AddOwnerActivity.class);
+            Intent intent = new Intent(MainActivity.this, OwnerActivity.class);
             startActivity(intent);
         }
         if (v == mManagerImageView) {
-            Intent intent = new Intent(MainActivity.this, AddManagerActivity.class);
+            Intent intent = new Intent(MainActivity.this, ManagerActivity.class);
             startActivity(intent);
         }
         if (v == mTenantsImageView) {

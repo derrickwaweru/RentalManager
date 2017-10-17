@@ -7,7 +7,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.derrick.rentalmanager.R;
@@ -26,7 +25,6 @@ public class AddManagerActivity extends AppCompatActivity implements View.OnClic
     @Bind(R.id.propertyManaged) EditText mPropertyManaged;
     @Bind(R.id.propertyManagedOwner) EditText mPropertyManagedOwner;
     @Bind(R.id.propertyManagedAddress) EditText mPropertyManagedAddress;
-    @Bind(R.id.managerTextView) TextView mManagerTextView;
     @Bind(R.id.addManagerBtn) Button mAddManagerBtn;
 
     DatabaseReference databaseManagers;
@@ -40,19 +38,12 @@ public class AddManagerActivity extends AppCompatActivity implements View.OnClic
         databaseManagers = FirebaseDatabase.getInstance().getReference("managers");
 
         mAddManagerBtn.setOnClickListener(this);
-        mManagerTextView.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if(v == mAddManagerBtn) {
             addManager();
-        }
-        if(v == mManagerTextView) {
-            Intent intent = new Intent(AddManagerActivity.this, ManagerActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-            finish();
         }
     }
 

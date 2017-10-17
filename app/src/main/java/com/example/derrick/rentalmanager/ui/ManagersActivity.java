@@ -3,6 +3,9 @@ package com.example.derrick.rentalmanager.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.example.derrick.rentalmanager.R;
@@ -35,6 +38,24 @@ public class ManagersActivity extends AppCompatActivity {
         databaseManagers = FirebaseDatabase.getInstance().getReference("managers");
 
         managers = new ArrayList<>();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.add_manager_menu, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if(id == R.id.action_add_manager) {
+            Intent intent = new Intent(ManagersActivity.this, AddManagerActivity.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
