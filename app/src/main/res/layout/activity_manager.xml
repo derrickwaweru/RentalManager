@@ -96,7 +96,7 @@
         android:layout_marginTop="20dp">
 
         <ImageView
-            android:id="@+id/ownersImageView"
+            android:id="@+id/managerOwnersImageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/owner"
@@ -105,7 +105,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ownersImageView"
+            android:layout_below="@+id/managerOwnersImageView"
             android:layout_marginLeft="20dp"
             android:text="Owners"
             android:textSize="30sp"
@@ -115,7 +115,7 @@
             android:id="@+id/managerPaymentsImageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_toRightOf="@+id/ownersImageView"
+            android:layout_toRightOf="@+id/managerOwnersImageView"
             android:layout_marginLeft="100dp"
             android:src="@drawable/expenses" />
 
