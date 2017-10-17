@@ -16,6 +16,7 @@ public class OwnerActivity extends AppCompatActivity implements View.OnClickList
     @Bind(R.id.ownerTenantsImageView) ImageView mOwnerTenants;
     @Bind(R.id.ownerPropertyImageView) ImageView mOwnerProperty;
     @Bind(R.id.ownerPaymentsImageView) ImageView mOwnerPayments;
+    @Bind(R.id.ownerManagersImageView) ImageView mOwnerManagers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +30,25 @@ public class OwnerActivity extends AppCompatActivity implements View.OnClickList
         mOwnerTenants.setOnClickListener(this);
         mOwnerProperty.setOnClickListener(this);
         mOwnerPayments.setOnClickListener(this);
+        mOwnerManagers.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if(v == mOwnerReports) {
             Intent intent = new Intent(OwnerActivity.this, ReportsActivity.class);
+            startActivity(intent);
+        }
+        if(v == mOwnerManagers) {
+            Intent intent = new Intent(OwnerActivity.this, ManagersActivity.class);
+            startActivity(intent);
+        }
+        if(v == mOwnerTenants) {
+            Intent intent = new Intent(OwnerActivity.this, TenantActivity.class);
+            startActivity(intent);
+        }
+        if(v == mOwnerProperty) {
+            Intent intent = new Intent(OwnerActivity.this, PropertyActivity.class);
             startActivity(intent);
         }
     }
