@@ -68,7 +68,7 @@ public class AddManagerActivity extends AppCompatActivity implements View.OnClic
         if(!TextUtils.isEmpty(firstName)) {
             String id = databaseManagers.push().getKey();
 
-            AddManager addManager = new AddManager(firstName, lastName, email, phone, propertyManaged, propertyOwner, propertyAddress);
+            AddManager addManager = new AddManager(id, firstName, lastName, email, phone, propertyManaged, propertyOwner, propertyAddress);
 
             databaseManagers.child(id).setValue(addManager);
 

@@ -65,7 +65,7 @@ public class AddWorkersActivity extends AppCompatActivity implements View.OnClic
         if(!TextUtils.isEmpty(firstName)) {
             String id = databaseWorkers.push().getKey();
 
-            AddWorkers addWorkers = new AddWorkers(firstName, lastName, profession, phone, salary, worksAt);
+            AddWorkers addWorkers = new AddWorkers(id, firstName, lastName, profession, phone, salary, worksAt);
 
             databaseWorkers.child(id).setValue(addWorkers);
 
@@ -76,4 +76,13 @@ public class AddWorkersActivity extends AppCompatActivity implements View.OnClic
         Intent intent = new Intent(AddWorkersActivity.this, WorkersActivity.class);
         startActivity(intent);
     }
+
+    /*
+    private boolean fireWorker(String id) {
+        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("workers").child(id);
+        dR.removeValue();
+        Toast.makeText(getApplicationContext(), "Worker Fired!", Toast.LENGTH_SHORT).show();
+        return true;
+    }
+    */
 }

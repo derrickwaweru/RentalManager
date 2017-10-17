@@ -61,7 +61,7 @@ public class AddTenantActivity extends AppCompatActivity implements View.OnClick
 
         if(!TextUtils.isEmpty(firstName)){
             String id = databaseTenants.push().getKey();
-            AddTenant addTenant = new AddTenant(firstName,lastName, roomNumber, email, phone);
+            AddTenant addTenant = new AddTenant(id, firstName,lastName, roomNumber, email, phone);
             databaseTenants.child(id).setValue(addTenant);
 
             mTenantFirstName.setText("");

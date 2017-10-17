@@ -65,7 +65,7 @@ public class AddReportsActivity extends AppCompatActivity implements View.OnClic
         if(!TextUtils.isEmpty(from)) {
             String id = databaseReports.push().getKey();
 
-            AddReports addReports = new AddReports(from, to, reportType, reportDescription, propertyName, roomNumber);
+            AddReports addReports = new AddReports(id, from, to, reportType, reportDescription, propertyName, roomNumber);
 
             databaseReports.child(id).setValue(addReports);
 

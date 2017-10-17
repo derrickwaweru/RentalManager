@@ -1,8 +1,8 @@
 package com.example.derrick.rentalmanager.ui;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.derrick.rentalmanager.R;
-import com.example.derrick.rentalmanager.models.AddOwner;
 import com.example.derrick.rentalmanager.models.AddProperty;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -69,7 +68,7 @@ public class AddPropertyActivity extends AppCompatActivity implements View.OnCli
             String id = databaseProperties.push().getKey();
 
             //creating owner Object
-            AddProperty addProperty= new AddProperty(name, location, category, income);
+            AddProperty addProperty= new AddProperty(id, name, location, category, income);
 
             //Saving the owner
             databaseProperties.child(id).setValue(addProperty);

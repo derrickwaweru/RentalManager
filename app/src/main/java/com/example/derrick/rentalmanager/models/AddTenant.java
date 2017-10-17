@@ -5,6 +5,7 @@ package com.example.derrick.rentalmanager.models;
  */
 
 public class AddTenant {
+    private String tenantId;
     private String firstName;
     private String lastName;
     private String roomNumber;
@@ -15,13 +16,18 @@ public class AddTenant {
     public AddTenant() {
     }
 
-    public AddTenant(String firstName, String lastName, String roomNumber, String email, String phone) {
+    public AddTenant(String tenantId, String firstName, String lastName, String roomNumber, String email, String phone) {
+        this.tenantId = tenantId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.roomNumber = roomNumber;
         this.email = email;
         this.phone = phone;
 
+    }
+
+    public String getTenantId() {
+        return tenantId;
     }
 
     public String getFirstName() {
