@@ -6,26 +6,34 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:id="@+id/textViewName"
         android:text=" Name:"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:id="@+id/textViewLocation"
         android:text="Location:"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:id="@+id/textViewCategory"
         android:text="Category:"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewIncome"
-        android:text="Income:"/>
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/textViewEmail"
+        android:text="Email:"/>
 
 
 

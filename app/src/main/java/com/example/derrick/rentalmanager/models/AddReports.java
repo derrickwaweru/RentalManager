@@ -8,16 +8,18 @@ public class AddReports {
     private String reportDescription;
     private String propertyName;
     private String roomNumber;
+    private String reportId;
 
     public AddReports() {}
 
-    public AddReports(String from, String to, String reportType, String reportDescription, String propertyName, String roomNumber) {
+    public AddReports(String from, String to, String reportType, String reportDescription, String propertyName, String roomNumber, String reportId) {
         this.from = from;
         this.to = to;
         this.reportType = reportType;
         this.reportDescription = reportDescription;
         this.propertyName = propertyName;
         this.roomNumber = roomNumber;
+        this.reportId = reportId;
     }
 
     public String getFrom() {
@@ -42,5 +44,9 @@ public class AddReports {
 
     public String getRoomNumber() {
         return roomNumber;
+    }
+
+    public String getReportId () {
+        return reportId;
     }
 }

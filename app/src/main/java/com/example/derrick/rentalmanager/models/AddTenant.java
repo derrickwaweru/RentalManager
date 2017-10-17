@@ -10,17 +10,20 @@ public class AddTenant {
     private String roomNumber;
     private String email;
     private String phone;
+    private String tenantId;
 
 
     public AddTenant() {
     }
 
-    public AddTenant(String firstName, String lastName, String roomNumber, String email, String phone) {
+    public AddTenant(String firstName, String lastName, String roomNumber, String email, String phone, String tenantId) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.roomNumber = roomNumber;
         this.email = email;
         this.phone = phone;
+        this.tenantId = tenantId;
+
 
     }
 
@@ -42,6 +45,10 @@ public class AddTenant {
 
     public String getPhone() {
         return phone;
+    }
+
+    public String getTenantId () {
+        return tenantId;
     }
 
 

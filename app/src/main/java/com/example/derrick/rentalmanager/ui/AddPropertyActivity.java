@@ -23,9 +23,8 @@ public class AddPropertyActivity extends AppCompatActivity implements View.OnCli
     @Bind(R.id.propertyNameEditText) EditText mPropertyName;
     @Bind(R.id.propertyLocationEditText) EditText mPropertyLocation;
     @Bind(R.id.propertyCategoryEditText) EditText mPropertyCategory;
-    @Bind(R.id.propertyIncomeEditText) EditText mPropertyIncome;
-    @Bind(R.id.propertyTextView)
-    TextView mPropertyTextView;
+    @Bind(R.id.propertyEmailEditText) EditText mPropertyEmail;
+    @Bind(R.id.propertyTextView) TextView mPropertyTextView;
     @Bind(R.id.addPropertyBtn) Button mAddPropertyBtn;
 
     DatabaseReference databaseProperties;
@@ -58,7 +57,7 @@ public class AddPropertyActivity extends AppCompatActivity implements View.OnCli
         String name = mPropertyName.getText().toString().trim();
         String location = mPropertyLocation.getText().toString().trim();
         String category = mPropertyCategory.getText().toString().trim();
-        String income= mPropertyIncome.getText().toString().trim();
+        String email= mPropertyEmail.getText().toString().trim();
 
         //checking if the value is provided
         if(!TextUtils.isEmpty(name)) {
@@ -69,7 +68,7 @@ public class AddPropertyActivity extends AppCompatActivity implements View.OnCli
             String id = databaseProperties.push().getKey();
 
             //creating owner Object
-            AddProperty addProperty= new AddProperty(name, location, category, income);
+            AddProperty addProperty= new AddProperty(name, location, category, email, id);
 
             //Saving the owner
             databaseProperties.child(id).setValue(addProperty);
@@ -78,7 +77,7 @@ public class AddPropertyActivity extends AppCompatActivity implements View.OnCli
             mPropertyName.setText("");
             mPropertyLocation.setText("");
             mPropertyCategory.setText("");
-            mPropertyIncome.setText("");
+            mPropertyEmail.setText("");
 
             //displaying a success toast
             Toast.makeText(this, "Property Added!", Toast.LENGTH_SHORT).show();

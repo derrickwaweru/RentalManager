@@ -9,11 +9,12 @@ public class AddManager {
     private String propertyManaged;
     private String propertyOwner;
     private String propertyAddress;
+    private String managerId;
 
     public AddManager() { }
 
     public AddManager(String firstName, String lastName, String email, String phone, String propertyManaged,
-                      String propertyOwner, String propertyAddress) {
+                      String propertyOwner, String propertyAddress, String managerId) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -21,6 +22,7 @@ public class AddManager {
         this.propertyManaged = propertyManaged;
         this.propertyOwner = propertyOwner;
         this.propertyAddress = propertyAddress;
+        this.managerId = managerId;
     }
 
     public String getFirstName() {
@@ -49,5 +51,9 @@ public class AddManager {
 
     public String getPropertyAddress() {
         return propertyAddress;
+    }
+
+    public String getManagerId() {
+        return managerId;
     }
 }

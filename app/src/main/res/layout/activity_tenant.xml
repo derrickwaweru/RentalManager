@@ -6,19 +6,20 @@
     android:layout_height="match_parent"
     tools:context="com.example.derrick.rentalmanager.ui.TenantActivity">
 
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="List of Tenants"-->
-        <!--android:textSize="20sp"-->
-        <!--android:textStyle="bold"-->
-        <!--android:id="@+id/tenantListTextView"-->
-        <!--android:layout_marginLeft="110dp"-->
-        <!--android:textColor="@color/colorAccent" />-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="List of tenants"
+        android:id="@+id/tenantListTextView"
+        android:layout_marginLeft="110dp"
+        android:textColor="@color/colorAccent" />
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tenantListTextView"
         android:id="@+id/ListViewTenants">
 
     </ListView>

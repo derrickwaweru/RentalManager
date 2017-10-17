@@ -68,15 +68,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawablePadding="5dp"
-            android:hint="Email"/>
+            android:hint="Category"/>
 
         <EditText
-            android:id="@+id/propertyIncomeEditText"
+            android:id="@+id/propertyEmailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/propertyCategoryEditText"
             android:layout_marginTop="20dp"
-            android:hint="Category"
+            android:hint="Email"
 
             android:drawablePadding="5dp" />
 
@@ -106,7 +106,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/addPropertyBtn"
             android:layout_marginTop="20dp"
-            android:text="Already a property? Click Here!"
+            android:text="Already Listed? Click Here!"
             android:textSize="18sp"
             android:textColor="@color/colorAccent"
             android:textStyle="bold"

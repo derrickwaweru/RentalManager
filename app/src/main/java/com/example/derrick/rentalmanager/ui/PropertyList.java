@@ -33,14 +33,14 @@ public class PropertyList extends ArrayAdapter<AddProperty> {
         TextView textViewName = (TextView) listViewItem.findViewById(R.id.textViewName);
         TextView textViewLocation = (TextView) listViewItem.findViewById(R.id.textViewLocation);
         TextView textViewCategory = (TextView) listViewItem.findViewById(R.id.textViewCategory);
-        TextView textViewIncome = (TextView) listViewItem.findViewById(R.id.textViewIncome);
+        TextView textViewEmail = (TextView) listViewItem.findViewById(R.id.textViewEmail);
 
 
         AddProperty property = properties.get(position);
-        textViewName.setText(property.getName());
-        textViewLocation.setText(property.getLocation());
-        textViewCategory.setText(property.getCategory());
-        textViewIncome.setText(property.getIncome());
+        textViewName.setText("Name:" + property.getName());
+        textViewLocation.setText("Location:" + property.getLocation());
+        textViewCategory.setText("Category:" + property.getCategory());
+        textViewEmail.setText("Email:" + property.getEmail());
 
 
         return listViewItem;

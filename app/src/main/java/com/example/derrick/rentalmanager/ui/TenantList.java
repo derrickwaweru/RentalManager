@@ -39,11 +39,11 @@ public class TenantList extends ArrayAdapter<AddTenant> {
 
 
         AddTenant tenant = tenants.get(position);
-        textViewFirstName.setText(tenant.getFirstName());
-        textViewLastName.setText(tenant.getLastName());
-        textViewRoomNumber.setText(tenant.getRoomNumber());
-        textViewEmail.setText(tenant.getEmail());
-        textViewPhone.setText(tenant.getPhone());
+        textViewFirstName.setText("First Name:" + tenant.getFirstName());
+        textViewLastName.setText("Last Name:" + tenant.getLastName());
+        textViewRoomNumber.setText("Room Number:" + tenant.getRoomNumber());
+        textViewEmail.setText("Email:" + tenant.getEmail());
+        textViewPhone.setText("Phone:" + tenant.getPhone());
 
         return listViewItem;
     }

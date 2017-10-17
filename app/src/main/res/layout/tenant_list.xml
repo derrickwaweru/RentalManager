@@ -5,6 +5,8 @@
 
     <TextView
         android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:layout_height="wrap_content"
         android:id="@+id/textViewFirstName"
         android:text="First Name:"/>
@@ -12,24 +14,32 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:id="@+id/textViewLastName"
         android:text="Last Name:"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:id="@+id/textViewRoomNumber"
         android:text="Room Number:"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:id="@+id/textViewEmail"
         android:text="Email:"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:id="@+id/textViewPhone"
         android:text="Phone Number"/>
 

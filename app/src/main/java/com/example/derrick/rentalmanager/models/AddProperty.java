@@ -8,16 +8,18 @@ public class AddProperty {
     private String name;
     private String location;
     private String category;
-    private String income;
+    private String email;
+    private String propertyId;
 
     public AddProperty() {
     }
 
-    public AddProperty(String name, String location, String category, String income) {
+    public AddProperty(String name, String location, String category, String email, String propertyId) {
         this.name = name;
         this.location = location;
         this.category = category;
-        this.income = income;
+        this.email = email;
+        this.propertyId = propertyId;
     }
 
     public String getName() {
@@ -32,7 +34,11 @@ public class AddProperty {
         return category;
     }
 
-    public String getIncome() {
-        return income;
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPropertyId () {
+        return propertyId;
     }
 }

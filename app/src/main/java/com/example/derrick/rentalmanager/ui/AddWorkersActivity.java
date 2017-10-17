@@ -65,7 +65,7 @@ public class AddWorkersActivity extends AppCompatActivity implements View.OnClic
         if(!TextUtils.isEmpty(firstName)) {
             String id = databaseWorkers.push().getKey();
 
-            AddWorkers addWorkers = new AddWorkers(firstName, lastName, profession, phone, salary, worksAt);
+            AddWorkers addWorkers = new AddWorkers(firstName, lastName, profession, phone, salary, worksAt, id);
 
             databaseWorkers.child(id).setValue(addWorkers);
 

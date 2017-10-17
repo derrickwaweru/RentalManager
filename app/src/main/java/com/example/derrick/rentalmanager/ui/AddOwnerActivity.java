@@ -71,7 +71,7 @@ public class AddOwnerActivity extends AppCompatActivity implements View.OnClickL
             String id = databaseOwners.push().getKey();
 
             //creating owner Object
-            AddOwner addOwner = new AddOwner(firstName, lastName, email, phone);
+            AddOwner addOwner = new AddOwner(firstName, lastName, email, phone, id);
 
             //Saving the owner
             databaseOwners.child(id).setValue(addOwner);
