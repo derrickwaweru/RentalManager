@@ -100,18 +100,21 @@
             android:drawablePadding="5dp"
             android:layout_marginTop="10dp"/>
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/addWorkers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/workersProperty"
-            android:layout_marginTop="30dp"
-            android:background="@color/colorAccent"
+            android:layout_marginTop="20dp"
+            app:buttonColor="@color/colorAccent"
             android:text="Add Worker"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:cornerRadius="4dp" />
 
     </RelativeLayout>
 </RelativeLayout>

@@ -99,30 +99,21 @@
         android:layout_height="wrap_content"
         android:id="@+id/relativeLayout3"
         android:layout_below="@+id/relativeLayout2"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/addTenantBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add Tenant"
-            android:background="@color/colorAccent"
+            app:buttonColor="@color/colorAccent"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textAllCaps="false"/>
-
-        <TextView
-            android:id="@+id/tenantTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/addTenantBtn"
-            android:layout_marginTop="20dp"
-            android:text="Already a Tenant? Click Here!"
-            android:textSize="18sp"
-            android:textColor="@color/colorAccent"
-            android:textStyle="bold"
-            android:layout_marginLeft="80dp"/>
+            android:textAllCaps="false"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:cornerRadius="4dp"/>
 
     </RelativeLayout>
 </RelativeLayout>

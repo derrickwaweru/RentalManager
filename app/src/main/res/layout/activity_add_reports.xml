@@ -134,17 +134,20 @@
             android:layout_marginTop="22dp"
             android:hint="Room Number" />
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/sumbitReportBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
+            app:buttonColor="@color/colorAccent"
             android:layout_below="@id/roomNumberEditText"
             android:layout_marginTop="20dp"
             android:text="Submit Report"
             android:textAllCaps="false"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:cornerRadius="4dp" />
     </RelativeLayout>
 </RelativeLayout>

@@ -108,7 +108,7 @@
             android:drawableLeft="@drawable/ic_local_taxi_black_24dp"
             android:drawablePadding="5dp" />
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/addManagerBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -117,8 +117,12 @@
             android:textAllCaps="false"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:background="@color/colorAccent"
-            android:textColor="@android:color/white" />
+            app:buttonColor="@color/colorAccent"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            app:cornerRadius="4dp"/>
 
     </RelativeLayout>
 </RelativeLayout>

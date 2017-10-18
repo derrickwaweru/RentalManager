@@ -12,10 +12,14 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
-    @Bind(R.id.managerButton) Button mManagerButton;
-    @Bind(R.id.tenantButton) Button mTenantButton;
-    @Bind(R.id.ownerButton) Button mOwnerButton;
-    @Bind(R.id.agentButton) Button mAgentButton;
+    @Bind(R.id.managerButton)
+    Button mManagerButton;
+    @Bind(R.id.tenantButton)
+    Button mTenantButton;
+    @Bind(R.id.ownerButton)
+    Button mOwnerButton;
+    @Bind(R.id.agentButton)
+    Button mAgentButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,26 +33,26 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View v){
-        if(v == mManagerButton){
+    public void onClick(View v) {
+        if (v == mManagerButton) {
             Intent intent = new Intent(HomeActivity.this, ManagerActivity.class);
             startActivity(intent);
 
         }
-        if(v == mOwnerButton){
+        if (v == mOwnerButton) {
             Intent intent = new Intent(HomeActivity.this, OwnerActivity.class);
             startActivity(intent);
 
         }
-        if(v == mTenantButton){
-            Intent intent = new Intent(HomeActivity.this, TenantActivity.class);
+        if (v == mTenantButton) {
+            Intent intent = new Intent(HomeActivity.this, AddReportsActivity.class);
             startActivity(intent);
 
         }
-//        if(v == mAgentButton){
-//            Intent intent = new Intent(HomeActivity.this, AgentActivity.class);
-//            startActivity(intent)
-//            finish();
-//        }
+        if (v == mAgentButton) {
+            Intent intent = new Intent(HomeActivity.this, AgentActivity.class);
+            startActivity(intent);
+        }
     }
 }
+

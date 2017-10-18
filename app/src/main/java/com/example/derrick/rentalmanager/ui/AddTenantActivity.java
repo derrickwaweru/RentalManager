@@ -6,11 +6,10 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.derrick.rentalmanager.models.AddTenant;
 import com.example.derrick.rentalmanager.R;
+import com.example.derrick.rentalmanager.models.AddTenant;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -25,7 +24,6 @@ public class AddTenantActivity extends AppCompatActivity implements View.OnClick
     @Bind(R.id.tenantEmailEditText) EditText mTenantEmail;
     @Bind(R.id.tenantPhoneEditText) EditText mTenantPhone;
     @Bind(R.id.addTenantBtn) Button mAddTenantBtn;
-    @Bind(R.id.tenantTextView) TextView mTenantTextView;
 
     DatabaseReference databaseTenants;
 
@@ -35,7 +33,6 @@ public class AddTenantActivity extends AppCompatActivity implements View.OnClick
         setContentView(R.layout.activity_add_tenant);
         ButterKnife.bind(this);
         mAddTenantBtn.setOnClickListener(this);
-        mTenantTextView.setOnClickListener(this);
 
         databaseTenants = FirebaseDatabase.getInstance().getReference("tenants");
     }
@@ -45,10 +42,6 @@ public class AddTenantActivity extends AppCompatActivity implements View.OnClick
         if (v == mAddTenantBtn) {
             addTenant();
         }
-//        if (v == mTenantTextView) {
-//            Intent intent = new Intent(AddTenantActivity.this, TenantActivity.class);
-//
-//        }
     }
 
 

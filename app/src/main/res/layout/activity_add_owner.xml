@@ -90,16 +90,20 @@
         android:layout_below="@+id/relativeLayout2"
         android:layout_marginTop="20dp">
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/addOwnerBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add Owner"
-            android:background="@color/colorAccent"
+            app:buttonColor="@color/colorAccent"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            app:cornerRadius="4dp"/>
 
     </RelativeLayout>
 </RelativeLayout>
