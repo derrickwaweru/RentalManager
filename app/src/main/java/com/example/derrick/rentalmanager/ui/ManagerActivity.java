@@ -29,6 +29,7 @@ public class ManagerActivity extends AppCompatActivity implements View.OnClickLi
         mManagerReports.setOnClickListener(this);
         mWorkersImageView.setOnClickListener(this);
         mManagerOwners.setOnClickListener(this);
+        mManagerTenants.setOnClickListener(this);
     }
 
     @Override
@@ -43,6 +44,10 @@ public class ManagerActivity extends AppCompatActivity implements View.OnClickLi
         }
         if(v == mManagerOwners) {
             Intent intent = new Intent(ManagerActivity.this, OwnersActivity.class);
+            startActivity(intent);
+        }
+        if(v == mManagerTenants) {
+            Intent intent = new Intent(ManagerActivity.this, TenantActivity.class);
             startActivity(intent);
         }
     }
