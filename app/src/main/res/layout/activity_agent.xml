@@ -68,12 +68,12 @@
             android:drawablePadding="5dp" />
 
         <EditText
-            android:id="@+id/vaccancies"
+            android:id="@+id/vacancies"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/location"
             android:layout_marginTop="15dp"
-            android:hint="Vaccancies"
+            android:hint="Vacancies"
             android:drawableLeft="@drawable/ic_home_black_24dp"
             android:drawablePadding="5dp" />
 
@@ -85,8 +85,8 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="18dp"
-            android:layout_below="@+id/vaccancies"
-            android:text="Add Vaccancy"
+            android:layout_below="@+id/vacancies"
+            android:text="Add Vacancy"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"

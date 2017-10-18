@@ -105,7 +105,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/workersProperty"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             app:buttonColor="@color/colorAccent"
             android:text="Add Worker"
             android:textAllCaps="false"
