@@ -45,7 +45,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         }
         if (v == mTenantButton) {
-            Intent intent = new Intent(HomeActivity.this, TenantActivity.class);
+            Intent intent = new Intent(HomeActivity.this, AddReportsActivity.class);
             startActivity(intent);
 
         }
