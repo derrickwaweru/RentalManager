@@ -72,14 +72,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.derrick.rentalmanager.ui.OwnerActivity" />
         </activity>
-<<<<<<< HEAD
-=======
         <activity android:name=".ui.AgentActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.derrick.rentalmanager.ui.HomeActivity" />
         </activity>
->>>>>>> 49e4450409867300e33f48803ebbee1dbf361078
     </application>
 
 </manifest>
