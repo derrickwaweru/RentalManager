@@ -120,16 +120,5 @@
             android:background="@color/colorAccent"
             android:textColor="@android:color/white" />
 
-        <TextView
-            android:id="@+id/managerTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/addManagerBtn"
-            android:layout_marginTop="15dp"
-            android:text="Already a Manager? Click Here!"
-            android:layout_marginLeft="50dp"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimary" />
     </RelativeLayout>
 </RelativeLayout>

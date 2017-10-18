@@ -15,6 +15,8 @@ public class AddManager {
 
     public AddManager(String firstName, String lastName, String email, String phone, String propertyManaged,
                       String propertyOwner, String propertyAddress, String managerId) {
+
+
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -24,6 +26,8 @@ public class AddManager {
         this.propertyAddress = propertyAddress;
         this.managerId = managerId;
     }
+
+
 
     public String getFirstName() {
         return firstName;

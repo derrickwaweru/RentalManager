@@ -101,17 +101,5 @@
             android:textStyle="bold"
             android:textAllCaps="false"/>
 
-        <TextView
-            android:id="@+id/ownerTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/addOwnerBtn"
-            android:layout_marginTop="20dp"
-            android:text="Already an owner? Click Here!"
-            android:textSize="18sp"
-            android:textColor="@color/colorAccent"
-            android:textStyle="bold"
-            android:layout_marginLeft="80dp"/>
-
     </RelativeLayout>
 </RelativeLayout>

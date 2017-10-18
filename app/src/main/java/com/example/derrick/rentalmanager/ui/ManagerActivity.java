@@ -16,6 +16,7 @@ public class ManagerActivity extends AppCompatActivity implements View.OnClickLi
     @Bind(R.id.managerTenants) ImageView mManagerTenants;
     @Bind(R.id.workersImageView) ImageView mWorkersImageView;
     @Bind(R.id.managerPayments) ImageView mManagerPayments;
+    @Bind(R.id.managerOwnersImageView) ImageView mManagerOwners;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class ManagerActivity extends AppCompatActivity implements View.OnClickLi
 
         mManagerReports.setOnClickListener(this);
         mWorkersImageView.setOnClickListener(this);
+        mManagerOwners.setOnClickListener(this);
     }
 
     @Override
@@ -37,6 +39,10 @@ public class ManagerActivity extends AppCompatActivity implements View.OnClickLi
         }
         if(v == mWorkersImageView) {
            Intent intent = new Intent(ManagerActivity.this, WorkersActivity.class);
+            startActivity(intent);
+        }
+        if(v == mManagerOwners) {
+            Intent intent = new Intent(ManagerActivity.this, OwnersActivity.class);
             startActivity(intent);
         }
     }

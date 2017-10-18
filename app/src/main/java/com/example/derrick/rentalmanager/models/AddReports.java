@@ -2,6 +2,7 @@ package com.example.derrick.rentalmanager.models;
 
 
 public class AddReports {
+
     private String from;
     private String to;
     private String reportType;
@@ -10,9 +11,11 @@ public class AddReports {
     private String roomNumber;
     private String reportId;
 
+
     public AddReports() {}
 
     public AddReports(String from, String to, String reportType, String reportDescription, String propertyName, String roomNumber, String reportId) {
+
         this.from = from;
         this.to = to;
         this.reportType = reportType;
@@ -21,6 +24,8 @@ public class AddReports {
         this.roomNumber = roomNumber;
         this.reportId = reportId;
     }
+
+
 
     public String getFrom() {
         return from;

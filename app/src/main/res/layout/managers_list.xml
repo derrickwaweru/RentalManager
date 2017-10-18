@@ -4,62 +4,43 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/managersFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/workersFirstNameTextView"
         android:layout_marginTop="10dp"
         android:textSize="15sp"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/managersLastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/workersLastNameTextView"
         android:layout_marginTop="10dp"
         android:textSize="15sp"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/managersEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/workersProfessionTextView"
         android:layout_marginTop="10dp"
         android:textSize="15sp"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/managersPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/workersPhoneTextView"
         android:layout_marginTop="10dp"
         android:textSize="15sp"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/managersProperty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/workersSalaryTextView"
         android:layout_marginTop="10dp"
         android:textSize="15sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/workersPropertyTextView"
-        android:layout_marginTop="10dp"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/fireBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fire"
-        android:background="@color/btnBackground"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="290dp"/>
 </LinearLayout>

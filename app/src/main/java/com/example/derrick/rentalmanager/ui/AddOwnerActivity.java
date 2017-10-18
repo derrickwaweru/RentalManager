@@ -7,11 +7,10 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.derrick.rentalmanager.models.AddOwner;
 import com.example.derrick.rentalmanager.R;
+import com.example.derrick.rentalmanager.models.AddOwner;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -23,7 +22,6 @@ public class AddOwnerActivity extends AppCompatActivity implements View.OnClickL
     @Bind(R.id.ownerLastNameEditText) EditText mOwnerLastName;
     @Bind(R.id.ownerEmailEditText) EditText mOwnerEmail;
     @Bind(R.id.ownerPhoneEditText) EditText mOwnerPhone;
-    @Bind(R.id.ownerTextView) TextView mOwnerTextView;
     @Bind(R.id.addOwnerBtn) Button mAddOwnerBtn;
 
     DatabaseReference databaseOwners;
@@ -35,7 +33,6 @@ public class AddOwnerActivity extends AppCompatActivity implements View.OnClickL
         ButterKnife.bind(this);
 
         mAddOwnerBtn.setOnClickListener(this);
-        mOwnerTextView.setOnClickListener(this);
 
         //getting the reference of owners node
         databaseOwners = FirebaseDatabase.getInstance().getReference("owners");
@@ -46,12 +43,6 @@ public class AddOwnerActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         if(v == mAddOwnerBtn) {
             addOwner();
-        }
-        if(v == mOwnerTextView) {
-            Intent intent = new Intent(AddOwnerActivity.this, OwnerActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-            finish();
         }
     }
 

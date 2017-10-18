@@ -2,6 +2,7 @@ package com.example.derrick.rentalmanager.models;
 
 
 public class AddWorkers {
+
     private String firstName;
     private String lastName;
     private String profession;
@@ -13,6 +14,7 @@ public class AddWorkers {
     public AddWorkers() { }
 
     public AddWorkers(String firstName, String lastName, String profession, String phone, String salary, String worksAt, String workersId) {
+
         this.firstName = firstName;
         this.lastName = lastName;
         this.profession = profession;
@@ -22,6 +24,8 @@ public class AddWorkers {
         this.workersId = workersId;
 
     }
+
+
 
     public String getFirstName() {
         return firstName;

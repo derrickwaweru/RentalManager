@@ -4,19 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.derrick.rentalmanager.ui.ManagerActivity">
+    tools:context="com.example.derrick.rentalmanager.ui.ManagerActivity"
+    android:background="@color/background">
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/firstRelative"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="40dp">
 
         <ImageView
             android:id="@+id/managerReportsImageView"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/newspaper" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/newspaper"
+            android:layout_marginLeft="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,11 +31,11 @@
 
         <ImageView
             android:id="@+id/managerTenants"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:src="@drawable/family"
             android:layout_toRightOf="@+id/managerReportsImageView"
-            android:layout_marginLeft="50dp" />
+            android:layout_marginLeft="100dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -50,13 +52,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/firstRelative"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="40dp"
+        android:id="@+id/secondRelative">
 
         <ImageView
             android:id="@+id/workersImageView"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/workers" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/workers"
+            android:layout_marginLeft="20dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -69,18 +73,60 @@
 
         <ImageView
             android:id="@+id/managerPayments"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/notes"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/payments"
             android:layout_toRightOf="@id/workersImageView"
-            android:layout_marginLeft="50dp" />
+            android:layout_marginLeft="100dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/managerPayments"
-            android:layout_marginLeft="220dp"
+            android:layout_marginLeft="215dp"
             android:text="Payments"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/secondRelative"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/managerOwnersImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/owner"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/managerOwnersImageView"
+            android:layout_marginLeft="20dp"
+            android:text="Owners"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/managerPaymentsImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_toRightOf="@+id/managerOwnersImageView"
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/expenses" />
+
+        <TextView
+            android:id="@+id/expensesImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/managerPaymentsImageView"
+            android:layout_marginLeft="215dp"
+            android:text="Expenses"
             android:textSize="30sp"
             android:textStyle="bold" />
 

@@ -67,6 +67,7 @@ public class AddReportsActivity extends AppCompatActivity implements View.OnClic
 
             AddReports addReports = new AddReports(from, to, reportType, reportDescription, propertyName, roomNumber, id);
 
+
             databaseReports.child(id).setValue(addReports);
 
             Toast.makeText(this, "Report Submitted!", Toast.LENGTH_SHORT).show();
