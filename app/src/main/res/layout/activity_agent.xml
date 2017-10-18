@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/one"
-        android:layout_marginTop="70dp">
+        android:layout_marginTop="60dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -77,6 +77,16 @@
             android:drawableLeft="@drawable/ic_home_black_24dp"
             android:drawablePadding="5dp" />
 
+        <EditText
+            android:id="@+id/rent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vacancies"
+            android:layout_marginTop="15dp"
+            android:hint="Rent Per Month"
+            android:drawableLeft="@drawable/ic_attach_money_black_24dp"
+            android:drawablePadding="5dp" />
+
         <info.hoang8f.widget.FButton
             android:id="@+id/addVaccancyBtn"
             android:layout_width="match_parent"
@@ -84,8 +94,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="18dp"
-            android:layout_below="@+id/vacancies"
+            android:layout_below="@+id/rent"
             android:text="Add Vacancy"
             android:textSize="20sp"
             android:textStyle="bold"
