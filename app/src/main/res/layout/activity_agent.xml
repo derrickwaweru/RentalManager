@@ -88,7 +88,7 @@
             android:drawablePadding="5dp" />
 
         <info.hoang8f.widget.FButton
-            android:id="@+id/addVaccancyBtn"
+            android:id="@+id/addVacancyBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
