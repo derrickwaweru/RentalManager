@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryLight"
+    android:background="@color/colorAccent"
+
     tools:context="com.example.derrick.rentalmanager.ui.HomeActivity">
 
     <TextView
@@ -14,6 +15,8 @@
         android:id="@+id/homeTextView"
         android:textSize="30dp"
         android:textStyle="bold"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_centerHorizontal="true" />
 
     <info.hoang8f.widget.FButton
@@ -25,8 +28,9 @@
         android:layout_marginRight="8dp"
         android:layout_below="@+id/homeTextView"
         android:text="MANAGER"
-        android:textColor="@android:color/white"
-        app:buttonColor="@color/btnSignActive"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="50dp"
+        app:buttonColor="@color/colorWhite"
         app:cornerRadius="4dp" />
 
 
@@ -39,8 +43,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:text="OWNER"
-        android:textColor="@android:color/white"
-        app:buttonColor="@color/btnSignActive"
+        android:textColor="@android:color/black"
+        app:buttonColor="@color/colorWhite"
         app:cornerRadius="4dp" />
 
     <info.hoang8f.widget.FButton
@@ -52,8 +56,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:text="TENANT"
-        android:textColor="@android:color/white"
-        app:buttonColor="@color/btnSignActive"
+        android:textColor="@android:color/black"
+        app:buttonColor="@color/colorWhite"
         app:cornerRadius="4dp" />
 
     <info.hoang8f.widget.FButton
@@ -65,8 +69,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:text="CUSTOMER"
-        android:textColor="@android:color/white"
-        app:buttonColor="@color/btnSignActive"
+        android:textColor="@android:color/black"
+        app:buttonColor="@color/colorWhite"
         app:cornerRadius="4dp" />
 
     <info.hoang8f.widget.FButton
@@ -78,7 +82,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:text="AGENT"
-        android:textColor="@android:color/white"
-        app:buttonColor="@color/btnSignActive"
+        android:textColor="@android:color/black"
+        app:buttonColor="@color/colorWhite"
         app:cornerRadius="4dp" />
 </RelativeLayout>
