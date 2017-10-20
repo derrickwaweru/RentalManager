@@ -4,34 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context="com.example.derrick.rentalmanager.ui.LoginActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_centerInParent="true"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_centerInParent="true"
-        android:id="@+id/linearLayout">
+        android:orientation="vertical">
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
+            android:layout_marginBottom="10dp"
+
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:nextFocusDown="@+id/passwordEditText"
             android:padding="10dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textColorHint="@color/colorAccent"
             android:textSize="20sp"
-            app:met_primaryColor="@android:color/white"
-            app:met_singleLineEllipsis="true"
-            app:met_baseColor="@android:color/primary_text_light"
-            app:met_floatingLabel="highlight"/>
+             />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/passwordEditText"
@@ -45,45 +43,43 @@
             android:textColor="@android:color/black"
             android:textColorHint="@color/colorAccent"
             android:textSize="20sp"
-            app:met_primaryColor="@android:color/white"
-            app:met_singleLineEllipsis="true"
-            app:met_floatingLabel="highlight"/>
+             />
 
 
         <info.hoang8f.widget.FButton
             android:id="@+id/passwordLoginButton"
-            android:text="Log In"
-            android:textColor="@android:color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_alignParentBottom="true"
-            app:buttonColor="@color/btnSignActive"
-            app:cornerRadius="4dp"/>
+            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Log In"
+            android:textColor="@android:color/black"
+            app:buttonColor="@color/colorWhite"
+            app:cornerRadius="4dp" />
 
         <TextView
+            android:id="@+id/registerTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:textColor="@color/colorAccent"
-            android:textStyle="bold"
-            android:textSize="15sp"
             android:text="Don't have an account? Sign up here!"
-            android:id="@+id/registerTextView"
-            android:layout_gravity="center_horizontal" />
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:textColor="@color/colorAccent"
-        android:textSize="30sp"
-        android:textStyle="bold"
         android:layout_above="@+id/linearLayout"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:text="Login"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
