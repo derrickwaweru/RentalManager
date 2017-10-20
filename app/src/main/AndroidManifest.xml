@@ -47,7 +47,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.derrick.rentalmanager.ui.ReportsActivity" />
         </activity>
-        <activity android:name=".ui.ReportsActivity"></activity>
+        <activity android:name=".ui.ReportsActivity" />
         <activity android:name=".ui.AddPropertyActivity" />
         <activity android:name=".ui.PropertyActivity" />
         <activity android:name=".ui.AddWorkersActivity">
@@ -76,6 +76,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.derrick.rentalmanager.ui.HomeActivity" />
         </activity>
+        <activity android:name=".chatting.Chat"></activity>
     </application>
 
 </manifest>
