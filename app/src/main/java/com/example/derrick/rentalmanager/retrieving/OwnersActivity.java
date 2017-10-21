@@ -1,4 +1,4 @@
-package com.example.derrick.rentalmanager.ui;
+package com.example.derrick.rentalmanager.retrieving;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.widget.ListView;
 
 import com.example.derrick.rentalmanager.R;
 import com.example.derrick.rentalmanager.models.AddOwner;
+import com.example.derrick.rentalmanager.saving.AddOwnerActivity;
+import com.example.derrick.rentalmanager.classes.OwnersList;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

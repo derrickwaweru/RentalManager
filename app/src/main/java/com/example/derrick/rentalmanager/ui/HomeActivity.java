@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.derrick.rentalmanager.R;
+import com.example.derrick.rentalmanager.saving.AddReportsActivity;
+import com.example.derrick.rentalmanager.saving.AgentActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

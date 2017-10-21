@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.derrick.rentalmanager.ui.AddReportsActivity"
+    tools:context="com.example.derrick.rentalmanager.saving.AddReportsActivity"
     android:background="@color/background">
 
     <RelativeLayout

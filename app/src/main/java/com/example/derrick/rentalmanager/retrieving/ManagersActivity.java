@@ -1,4 +1,4 @@
-package com.example.derrick.rentalmanager.ui;
+package com.example.derrick.rentalmanager.retrieving;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,9 @@ import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.example.derrick.rentalmanager.R;
-import com.example.derrick.rentalmanager.models.AddReports;
+import com.example.derrick.rentalmanager.models.AddManager;
+import com.example.derrick.rentalmanager.saving.AddManagerActivity;
+import com.example.derrick.rentalmanager.classes.ManagersList;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,29 +24,28 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class ReportsActivity extends AppCompatActivity {
-    @Bind(R.id.listViewReports)
-    ListView mListViewReports;
-
-    DatabaseReference databaseReports;
-    List<AddReports> reports;
+public class ManagersActivity extends AppCompatActivity {
+    @Bind(R.id.managersListView) ListView mManagersListView;
+    private List<AddManager> managers;
+    DatabaseReference databaseManagers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reports);
+        setContentView(R.layout.activity_managers);
         ButterKnife.bind(this);
 
         Intent intent = getIntent();
 
-        reports = new ArrayList<>();
-        databaseReports = FirebaseDatabase.getInstance().getReference("reports");
+        databaseManagers = FirebaseDatabase.getInstance().getReference("managers");
+
+        managers = new ArrayList<>();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_add_reports, menu);
+        inflater.inflate(R.menu.add_manager_menu, menu);
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -52,8 +53,8 @@ public class ReportsActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if(id == R.id.action_add_report) {
-            Intent intent = new Intent(ReportsActivity.this, AddReportsActivity.class);
+        if(id == R.id.action_add_manager) {
+            Intent intent = new Intent(ManagersActivity.this, AddManagerActivity.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
@@ -63,19 +64,18 @@ public class ReportsActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        databaseReports.addValueEventListener(new ValueEventListener() {
-
+        databaseManagers.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                reports.clear();
+                managers.clear();
 
                 for(DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    AddReports report = postSnapshot.getValue(AddReports.class);
-                    reports.add(report);
+                    AddManager manager = postSnapshot.getValue(AddManager.class);
+                    managers.add(manager);
                 }
 
-                ReportsList reportsAdapter = new ReportsList(ReportsActivity.this, reports);
-                mListViewReports.setAdapter(reportsAdapter);
+                ManagersList managersAdapter = new ManagersList(ManagersActivity.this, managers);
+                mManagersListView.setAdapter(managersAdapter);
             }
 
             @Override

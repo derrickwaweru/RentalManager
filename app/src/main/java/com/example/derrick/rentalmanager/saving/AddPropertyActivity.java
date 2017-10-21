@@ -1,4 +1,4 @@
-package com.example.derrick.rentalmanager.ui;
+package com.example.derrick.rentalmanager.saving;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.derrick.rentalmanager.R;
 import com.example.derrick.rentalmanager.models.AddProperty;
+import com.example.derrick.rentalmanager.ui.PropertyActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 

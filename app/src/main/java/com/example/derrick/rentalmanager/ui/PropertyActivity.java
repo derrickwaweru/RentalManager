@@ -10,7 +10,9 @@ import android.widget.ListView;
 
 import com.example.derrick.rentalmanager.R;
 
+import com.example.derrick.rentalmanager.classes.PropertyList;
 import com.example.derrick.rentalmanager.models.AddProperty;
+import com.example.derrick.rentalmanager.saving.AddPropertyActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

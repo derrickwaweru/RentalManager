@@ -1,4 +1,4 @@
-package com.example.derrick.rentalmanager.ui;
+package com.example.derrick.rentalmanager.retrieving;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,8 @@ import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.example.derrick.rentalmanager.R;
-import com.example.derrick.rentalmanager.models.AddManager;
+import com.example.derrick.rentalmanager.models.AddWorkers;
+import com.example.derrick.rentalmanager.saving.AddWorkersActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,28 +23,29 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class ManagersActivity extends AppCompatActivity {
-    @Bind(R.id.managersListView) ListView mManagersListView;
-    private List<AddManager> managers;
-    DatabaseReference databaseManagers;
+public class WorkersActivity extends AppCompatActivity {
+    @Bind(R.id.workersListView) ListView mWorkersListView;
+    List<AddWorkers> workers;
+
+    DatabaseReference databaseWorkers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_managers);
+        setContentView(R.layout.activity_workers);
         ButterKnife.bind(this);
+
+        databaseWorkers = FirebaseDatabase.getInstance().getReference("workers");
 
         Intent intent = getIntent();
 
-        databaseManagers = FirebaseDatabase.getInstance().getReference("managers");
-
-        managers = new ArrayList<>();
+        workers = new ArrayList<>();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.add_manager_menu, menu);
+        inflater.inflate(R.menu.add_worker_menu, menu);
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -51,8 +53,8 @@ public class ManagersActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if(id == R.id.action_add_manager) {
-            Intent intent = new Intent(ManagersActivity.this, AddManagerActivity.class);
+        if(id == R.id.action_add_worker) {
+            Intent intent = new Intent(WorkersActivity.this, AddWorkersActivity.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
@@ -62,18 +64,26 @@ public class ManagersActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        databaseManagers.addValueEventListener(new ValueEventListener() {
+        //attaching value event listener
+        databaseWorkers.addValueEventListener(new ValueEventListener() {
+
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                managers.clear();
+                //clearing the previous workers list
+                workers.clear();
 
+                //iterating through all the nodes
                 for(DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    AddManager manager = postSnapshot.getValue(AddManager.class);
-                    managers.add(manager);
+                    //getting worker
+                    AddWorkers worker = postSnapshot.getValue(AddWorkers.class);
+                    //adding worker to the list
+                    workers.add(worker);
                 }
 
-                ManagersList managersAdapter = new ManagersList(ManagersActivity.this, managers);
-                mManagersListView.setAdapter(managersAdapter);
+                //creating adapter
+                WorkersList workersListAdapter = new WorkersList(WorkersActivity.this, workers);
+                //attaching adapter to the listview
+                mWorkersListView.setAdapter(workersListAdapter);
             }
 
             @Override

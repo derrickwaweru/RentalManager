@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.derrick.rentalmanager.R;
+import com.example.derrick.rentalmanager.retrieving.ManagersActivity;
+import com.example.derrick.rentalmanager.retrieving.ReportsActivity;
+import com.example.derrick.rentalmanager.retrieving.TenantActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
