@@ -92,6 +92,6 @@ public class TenantActivity extends AppCompatActivity {
         Intent intent = new Intent(TenantActivity.this, AddTenantActivity.class);
         getIntent().setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
-        finish();
+
     }
 }

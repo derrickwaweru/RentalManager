@@ -76,7 +76,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.derrick.rentalmanager.ui.HomeActivity" />
         </activity>
-        <activity android:name=".ui.VacancyActivity"></activity>
+        <activity android:name=".ui.VacancyActivity" />
+        <activity android:name=".ui.PaymentActivity"></activity>
     </application>
 
 </manifest>
