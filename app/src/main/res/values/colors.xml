@@ -15,5 +15,6 @@
     <color name="colorSecondaryText">#727272</color>
     <color name="background">#F0D3FC</color>
     <color name="btnBackground">#e61927</color>
+    <color name="lisbackground">#161453</color>
 
 </resources>

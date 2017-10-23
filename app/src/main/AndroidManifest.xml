@@ -12,72 +12,75 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.MainActivity" />
-        <activity android:name=".ui.LoginActivity">
+        <activity android:name=".registration.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.CreateAccountActivity" />
-        <activity android:name=".ui.AddOwnerActivity">
+        <activity android:name=".registration.CreateAccountActivity" />
+        <activity android:name=".saving.AddOwnerActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.derrick.rentalmanager.ui.OwnersActivity" />
+                android:value="com.example.derrick.rentalmanager.retrieving.OwnersActivity" />
         </activity>
         <activity android:name=".ui.OwnerActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.derrick.rentalmanager.ui.MainActivity" />
         </activity>
-        <activity android:name=".ui.AddManagerActivity">
+        <activity android:name=".saving.AddManagerActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.derrick.rentalmanager.ui.ManagersActivity" />
+                android:value="com.example.derrick.rentalmanager.retrieving.ManagersActivity" />
         </activity>
         <activity android:name=".ui.ManagerActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.derrick.rentalmanager.ui.MainActivity" />
         </activity>
-        <activity android:name=".ui.AddTenantActivity" />
-        <activity android:name=".ui.TenantActivity" />
-        <activity android:name=".ui.AddReportsActivity">
+        <activity android:name=".saving.AddTenantActivity" />
+        <activity android:name=".retrieving.TenantActivity" />
+        <activity android:name=".saving.AddReportsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.derrick.rentalmanager.ui.ReportsActivity" />
+                android:value="com.example.derrick.rentalmanager.retrieving.ReportsActivity" />
         </activity>
-        <activity android:name=".ui.ReportsActivity" />
-        <activity android:name=".ui.AddPropertyActivity" />
-        <activity android:name=".ui.PropertyActivity" />
-        <activity android:name=".ui.AddWorkersActivity">
+        <activity android:name=".retrieving.ReportsActivity" />
+        <activity android:name=".saving.AddPropertyActivity" />
+        <activity android:name=".retrieving.PropertyActivity" />
+        <activity android:name=".saving.AddWorkersActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.derrick.rentalmanager.ui.WorkersActivity" />
+                android:value="com.example.derrick.rentalmanager.retrieving.WorkersActivity" />
         </activity>
         <activity android:name=".ui.HomeActivity" />
-        <activity android:name=".ui.WorkersActivity">
+        <activity android:name=".retrieving.WorkersActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.derrick.rentalmanager.ui.ManagerActivity" />
         </activity>
-        <activity android:name=".ui.OwnersActivity">
+        <activity android:name=".retrieving.OwnersActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.derrick.rentalmanager.ui.ManagerActivity" />
         </activity>
-        <activity android:name=".ui.ManagersActivity">
+        <activity android:name=".retrieving.ManagersActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.derrick.rentalmanager.ui.OwnerActivity" />
         </activity>
-        <activity android:name=".ui.AgentActivity">
+
+        <activity android:name=".saving.AgentActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.derrick.rentalmanager.ui.HomeActivity" />
         </activity>
         <activity android:name=".ui.VacancyActivity" />
         <activity android:name=".ui.PaymentActivity"></activity>
+        <activity android:name=".chatting.Chat" />
+        <activity android:name=".chatting.Users"></activity>
     </application>
 
 </manifest>

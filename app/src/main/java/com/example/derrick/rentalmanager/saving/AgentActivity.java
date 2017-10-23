@@ -1,4 +1,4 @@
-package com.example.derrick.rentalmanager.ui;
+package com.example.derrick.rentalmanager.saving;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
