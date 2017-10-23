@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.example.derrick.rentalmanager.R;
 import com.example.derrick.rentalmanager.models.AddProperty;
-import com.example.derrick.rentalmanager.ui.PropertyActivity;
+import com.example.derrick.rentalmanager.retrieving.PropertyActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 

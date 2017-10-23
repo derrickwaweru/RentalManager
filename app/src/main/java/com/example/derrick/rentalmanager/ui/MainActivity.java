@@ -12,6 +12,7 @@ import android.widget.ImageView;
 
 import com.example.derrick.rentalmanager.R;
 import com.example.derrick.rentalmanager.registration.LoginActivity;
+import com.example.derrick.rentalmanager.retrieving.PropertyActivity;
 import com.example.derrick.rentalmanager.retrieving.ReportsActivity;
 import com.example.derrick.rentalmanager.retrieving.TenantActivity;
 import com.google.firebase.auth.FirebaseAuth;
