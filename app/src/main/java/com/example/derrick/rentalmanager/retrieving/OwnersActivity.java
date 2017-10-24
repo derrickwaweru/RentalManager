@@ -64,7 +64,7 @@ public class OwnersActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        databaseOwners.addValueEventListener(new ValueEventListener() {
+        databaseOwners.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 owners.clear();

@@ -3,10 +3,14 @@ package com.example.derrick.rentalmanager.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.example.derrick.rentalmanager.R;
+import com.example.derrick.rentalmanager.registration.Users;
 import com.example.derrick.rentalmanager.retrieving.OwnersActivity;
 import com.example.derrick.rentalmanager.retrieving.ReportsActivity;
 import com.example.derrick.rentalmanager.retrieving.TenantActivity;
@@ -34,6 +38,24 @@ public class ManagerActivity extends AppCompatActivity implements View.OnClickLi
         mWorkersImageView.setOnClickListener(this);
         mManagerOwners.setOnClickListener(this);
         mManagerTenants.setOnClickListener(this);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.chat_menu, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if(id == R.id.action_chat) {
+            Intent intent = new Intent(ManagerActivity.this, Users.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

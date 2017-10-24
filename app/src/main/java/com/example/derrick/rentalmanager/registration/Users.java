@@ -1,4 +1,4 @@
-package com.example.derrick.rentalmanager.chatting;
+package com.example.derrick.rentalmanager.registration;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -79,7 +79,7 @@ public class Users extends AppCompatActivity {
             while(i.hasNext()){
                 key = i.next().toString();
 
-                if(!key.equals(UserDetails.mName)) {
+                if(!key.equals(UserDetails.username)) {
                     al.add(key);
                 }
 

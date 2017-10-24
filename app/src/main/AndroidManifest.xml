@@ -76,8 +76,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.derrick.rentalmanager.ui.HomeActivity" />
         </activity>
-        <activity android:name=".chatting.Chat" />
-        <activity android:name=".chatting.Users"></activity>
+        <activity android:name=".registration.Users" />
+        <activity android:name=".registration.Chat"></activity>
     </application>
 
 </manifest>

@@ -45,7 +45,7 @@ public class TenantActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         //attaching value event listener
-        databaseTenants.addValueEventListener(new ValueEventListener() {
+        databaseTenants.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 

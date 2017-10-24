@@ -65,7 +65,7 @@ public class ReportsActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        databaseReports.addValueEventListener(new ValueEventListener() {
+        databaseReports.addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {

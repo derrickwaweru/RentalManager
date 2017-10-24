@@ -19,14 +19,16 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class AddManagerActivity extends AppCompatActivity implements View.OnClickListener{
-    @Bind(R.id.managerFirstName) EditText mManagerFirstName;
+    @Bind(R.id.managerFirstName)
+    EditText mManagerFirstName;
     @Bind(R.id.managerLastName) EditText mManagerLastName;
     @Bind(R.id.managerEmail) EditText mManagerEmail;
     @Bind(R.id.managerPhone) EditText mManagerPhone;
     @Bind(R.id.propertyManaged) EditText mPropertyManaged;
     @Bind(R.id.propertyManagedOwner) EditText mPropertyManagedOwner;
     @Bind(R.id.propertyManagedAddress) EditText mPropertyManagedAddress;
-    @Bind(R.id.addManagerBtn) Button mAddManagerBtn;
+    @Bind(R.id.addManagerBtn)
+    Button mAddManagerBtn;
 
     DatabaseReference databaseManagers;
 

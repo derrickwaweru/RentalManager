@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.derrick.rentalmanager.chatting.Chat">
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context="com.example.derrick.rentalmanager.registration.Chat">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -30,5 +32,4 @@
         android:layout_height="wrap_content"
         android:gravity="bottom"
         android:layout_marginTop="5dp"/>
-
 </LinearLayout>
