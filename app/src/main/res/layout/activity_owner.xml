@@ -14,18 +14,18 @@
         android:layout_marginTop="40dp">
 
         <ImageView
-            android:id="@+id/ownerReportsImageView"
+            android:id="@+id/chatImageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/newspaper"
+            android:src="@drawable/chat"
             android:layout_marginLeft="20dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ownerReportsImageView"
-            android:layout_marginLeft="30dp"
-            android:text="Reports"
+            android:layout_below="@+id/chatImageView"
+            android:layout_marginLeft="40dp"
+            android:text="Chat"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -33,7 +33,7 @@
             android:id="@+id/ownerTenantsImageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_toRightOf="@+id/ownerReportsImageView"
+            android:layout_toRightOf="@+id/chatImageView"
             android:layout_marginLeft="100dp"
             android:src="@drawable/family"/>
 
@@ -71,19 +71,19 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/ownerPaymentsImageView"
+            android:id="@+id/ownerReportsImageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_toRightOf="@+id/ownerPropertyImageView"
             android:layout_marginLeft="100dp"
-            android:src="@drawable/payments" />
+            android:src="@drawable/newspaper" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="220dp"
-            android:layout_below="@+id/ownerPaymentsImageView"
-            android:text="Payments"
+            android:layout_below="@+id/ownerReportsImageView"
+            android:text="Reports"
             android:textSize="30sp"
             android:textStyle="bold" />
 

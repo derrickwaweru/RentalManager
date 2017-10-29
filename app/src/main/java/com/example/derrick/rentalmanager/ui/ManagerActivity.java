@@ -3,9 +3,6 @@ package com.example.derrick.rentalmanager.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -23,8 +20,8 @@ public class ManagerActivity extends AppCompatActivity implements View.OnClickLi
     @Bind(R.id.managerReportsImageView) ImageView mManagerReports;
     @Bind(R.id.managerTenants) ImageView mManagerTenants;
     @Bind(R.id.workersImageView) ImageView mWorkersImageView;
-    @Bind(R.id.managerPayments) ImageView mManagerPayments;
     @Bind(R.id.managerOwnersImageView) ImageView mManagerOwners;
+    @Bind(R.id.chatImageView) ImageView mChatImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,24 +35,7 @@ public class ManagerActivity extends AppCompatActivity implements View.OnClickLi
         mWorkersImageView.setOnClickListener(this);
         mManagerOwners.setOnClickListener(this);
         mManagerTenants.setOnClickListener(this);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.chat_menu, menu);
-
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if(id == R.id.action_chat) {
-            Intent intent = new Intent(ManagerActivity.this, Users.class);
-            startActivity(intent);
-        }
-        return super.onOptionsItemSelected(item);
+        mChatImageView.setOnClickListener(this);
     }
 
     @Override
@@ -74,6 +54,10 @@ public class ManagerActivity extends AppCompatActivity implements View.OnClickLi
         }
         if(v == mManagerTenants) {
             Intent intent = new Intent(ManagerActivity.this, TenantActivity.class);
+            startActivity(intent);
+        }
+        if(v == mChatImageView) {
+            Intent intent = new Intent(ManagerActivity.this, Users.class);
             startActivity(intent);
         }
     }

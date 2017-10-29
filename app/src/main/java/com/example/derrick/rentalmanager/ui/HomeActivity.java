@@ -22,7 +22,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     Button mOwnerButton;
     @Bind(R.id.agentButton)
     Button mAgentButton;
-    @Bind(R.id.chatButton) Button mChatButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +32,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         mTenantButton.setOnClickListener(this);
         mOwnerButton.setOnClickListener(this);
         mAgentButton.setOnClickListener(this);
-        mChatButton.setOnClickListener(this);
     }
 
     @Override

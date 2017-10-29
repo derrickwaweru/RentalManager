@@ -86,16 +86,4 @@
         app:buttonColor="@color/colorWhite"
         app:cornerRadius="4dp" />
 
-    <info.hoang8f.widget.FButton
-        android:id="@+id/chatButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:textColor="@android:color/black"
-        app:buttonColor="@color/colorWhite"
-        app:cornerRadius="4dp"
-        android:layout_below="@+id/agentButton"
-        android:text="Send A Message" />
 </RelativeLayout>
