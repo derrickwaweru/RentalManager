@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
+        android:textColor="@android:color/white"
         android:textSize="30dp"
         android:gravity="center"
         android:layout_marginBottom="20dp"/>
@@ -37,12 +38,14 @@
         android:textColorHint="@android:color/white"
         android:layout_marginBottom="10dp"/>
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
         android:id="@+id/registerButton"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp"
+        app:buttonColor="@color/colorWhite"
+        app:cornerRadius="4dp"/>
 
     <TextView
         android:layout_width="match_parent"
