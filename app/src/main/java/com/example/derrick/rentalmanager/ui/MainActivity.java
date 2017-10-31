@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.derrick.rentalmanager.R;
+import com.example.derrick.rentalmanager.registration.LoginActivity;
+import com.example.derrick.rentalmanager.retrieving.ExpensesActivity;
 import com.example.derrick.rentalmanager.retrieving.PropertyActivity;
 import com.example.derrick.rentalmanager.retrieving.ReportsActivity;
 import com.example.derrick.rentalmanager.retrieving.TenantActivity;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Bind(R.id.tenantsImageView) ImageView mTenantsImageView;
     @Bind(R.id.reportsImageView) ImageView mReportsImageView;
     @Bind(R.id.propertyImageView) ImageView mPropertyImageView;
+    @Bind(R.id.expensesImageView) ImageView mExpensesImageView;
 //    private TextView mAppNameTextView;
 
 //    @Bind(R.id.addTenantBtn) Button mAddTenantBtn;
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mTenantsImageView.setOnClickListener(this);
         mReportsImageView.setOnClickListener(this);
         mPropertyImageView.setOnClickListener(this);
+        mExpensesImageView.setOnClickListener(this);
 
 //        mAppNameTextView = (TextView) findViewById(R.id.appNameTextView);
 //        Typeface ostrichFont = Typeface.createFromAsset(getAssets(), "fonts/ostrich-regular.ttf");
@@ -71,6 +75,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if(v == mPropertyImageView) {
             Intent intent = new Intent(MainActivity.this, PropertyActivity.class);
+            startActivity(intent);
+        }
+        if(v == mExpensesImageView) {
+            Intent intent = new Intent(MainActivity.this, ExpensesActivity.class);
             startActivity(intent);
         }
     }

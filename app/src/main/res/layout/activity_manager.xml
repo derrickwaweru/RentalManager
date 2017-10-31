@@ -113,7 +113,7 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/managerPaymentsImageView"
+            android:id="@+id/managerExpensesImageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_toRightOf="@+id/managerOwnersImageView"
@@ -124,7 +124,7 @@
             android:id="@+id/expensesImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/managerPaymentsImageView"
+            android:layout_below="@+id/managerExpensesImageView"
             android:layout_marginLeft="215dp"
             android:text="Expenses"
             android:textSize="30sp"

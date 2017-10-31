@@ -4,27 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.derrick.rentalmanager.retrieving.PropertyActivity">
+    tools:context="com.example.derrick.rentalmanager.ui.VacancyActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:text="List of properties"
-        android:id="@+id/propertiyListTextView"
+        android:text="List of vacancies"
+        android:id="@+id/vacancyListTextView"
         android:layout_marginLeft="110dp"
         android:textColor="@color/colorAccent" />
-
-
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/propertiyListTextView"
-        android:id="@+id/ListViewProperties">
-
+        android:layout_below="@+id/vacancyListTextView"
+        android:id="@+id/ListViewVacancy">
     </ListView>
-
 
 </RelativeLayout>

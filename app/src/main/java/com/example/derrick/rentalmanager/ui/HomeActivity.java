@@ -22,6 +22,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     Button mOwnerButton;
     @Bind(R.id.agentButton)
     Button mAgentButton;
+    @Bind(R.id.customerButton) Button mCustomerButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         mTenantButton.setOnClickListener(this);
         mOwnerButton.setOnClickListener(this);
         mAgentButton.setOnClickListener(this);
+        mCustomerButton.setOnClickListener(this);
+
     }
 
     @Override
@@ -55,6 +59,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(HomeActivity.this, AgentActivity.class);
             startActivity(intent);
         }
+        if(v == mCustomerButton){
+            Intent intent = new Intent(HomeActivity.this, VacancyActivity.class);
+            startActivity(intent);
+        }
+
+
 
     }
 }
