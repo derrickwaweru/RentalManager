@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.example.derrick.rentalmanager.R;
 import com.example.derrick.rentalmanager.retrieving.ExpensesActivity;
+import com.example.derrick.rentalmanager.registration.Users;
 import com.example.derrick.rentalmanager.retrieving.OwnersActivity;
 import com.example.derrick.rentalmanager.retrieving.ReportsActivity;
 import com.example.derrick.rentalmanager.retrieving.TenantActivity;
@@ -20,9 +21,9 @@ public class ManagerActivity extends AppCompatActivity implements View.OnClickLi
     @Bind(R.id.managerReportsImageView) ImageView mManagerReports;
     @Bind(R.id.managerTenants) ImageView mManagerTenants;
     @Bind(R.id.workersImageView) ImageView mWorkersImageView;
-    @Bind(R.id.managerPayments) ImageView mManagerPayments;
     @Bind(R.id.managerOwnersImageView) ImageView mManagerOwners;
     @Bind(R.id.managerExpensesImageView) ImageView mManagerExpensesImageView;
+    @Bind(R.id.chatImageView) ImageView mChatImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,7 @@ public class ManagerActivity extends AppCompatActivity implements View.OnClickLi
         mManagerOwners.setOnClickListener(this);
         mManagerTenants.setOnClickListener(this);
         mManagerExpensesImageView.setOnClickListener(this);
+        mChatImageView.setOnClickListener(this);
     }
 
     @Override
@@ -63,5 +65,9 @@ public class ManagerActivity extends AppCompatActivity implements View.OnClickLi
             startActivity(intent);
         }
 
+        if(v == mChatImageView) {
+            Intent intent = new Intent(ManagerActivity.this, Users.class);
+            startActivity(intent);
+        }
     }
 }

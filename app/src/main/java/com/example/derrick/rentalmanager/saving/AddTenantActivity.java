@@ -1,5 +1,6 @@
 package com.example.derrick.rentalmanager.saving;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.derrick.rentalmanager.R;
 import com.example.derrick.rentalmanager.models.AddTenant;
+import com.example.derrick.rentalmanager.retrieving.TenantActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -70,5 +72,9 @@ public class AddTenantActivity extends AppCompatActivity implements View.OnClick
             //if the value is not given displaying a toast
             Toast.makeText(this, "Please enter a name", Toast.LENGTH_LONG).show();
         }
+        Intent intent = new Intent(AddTenantActivity.this, TenantActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
     }
 }

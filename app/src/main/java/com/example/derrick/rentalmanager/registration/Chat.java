@@ -1,4 +1,4 @@
-package com.example.derrick.rentalmanager.chatting;
+package com.example.derrick.rentalmanager.registration;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -42,8 +42,8 @@ public class Chat extends AppCompatActivity {
         scrollView = (ScrollView)findViewById(R.id.scrollView);
 
         Firebase.setAndroidContext(this);
-        reference1 = new Firebase("https://rentalmanager-ae458.firebaseio.com/messages/" + UserDetails.mName + "_" + UserDetails.chatWith);
-        reference2 = new Firebase("https://rentalmanager-ae458.firebaseio.com/messages/" + UserDetails.chatWith + "_" + UserDetails.mName);
+        reference1 = new Firebase("https://rentalmanager-ae458.firebaseio.com/messages/" + UserDetails.username + "_" + UserDetails.chatWith);
+        reference2 = new Firebase("https://rentalmanager-ae458.firebaseio.com/messages/" + UserDetails.chatWith + "_" + UserDetails.username);
 
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +53,7 @@ public class Chat extends AppCompatActivity {
                 if(!messageText.equals("")){
                     Map<String, String> map = new HashMap<String, String>();
                     map.put("message", messageText);
-                    map.put("user", UserDetails.mName);
+                    map.put("user", UserDetails.username);
                     reference1.push().setValue(map);
                     reference2.push().setValue(map);
                     messageArea.setText("");
@@ -68,7 +68,7 @@ public class Chat extends AppCompatActivity {
                 String message = map.get("message").toString();
                 String userName = map.get("user").toString();
 
-                if(userName.equals(UserDetails.mName)){
+                if(userName.equals(UserDetails.username)){
                     addMessageBox("You:-\n" + message, 1);
                 }
                 else{

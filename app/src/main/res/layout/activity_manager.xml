@@ -14,18 +14,18 @@
         android:layout_marginTop="40dp">
 
         <ImageView
-            android:id="@+id/managerReportsImageView"
+            android:id="@+id/chatImageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/newspaper"
+            android:src="@drawable/chat"
             android:layout_marginLeft="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reports"
-            android:layout_below="@+id/managerReportsImageView"
-            android:layout_marginLeft="30dp"
+            android:text="Chat"
+            android:layout_below="@+id/chatImageView"
+            android:layout_marginLeft="40dp"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -34,7 +34,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/family"
-            android:layout_toRightOf="@+id/managerReportsImageView"
+            android:layout_toRightOf="@+id/chatImageView"
             android:layout_marginLeft="100dp" />
 
         <TextView
@@ -72,19 +72,19 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/managerPayments"
+            android:id="@+id/managerReportsImageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/payments"
+            android:src="@drawable/newspaper"
             android:layout_toRightOf="@id/workersImageView"
             android:layout_marginLeft="100dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/managerPayments"
-            android:layout_marginLeft="215dp"
-            android:text="Payments"
+            android:layout_below="@+id/managerReportsImageView"
+            android:layout_marginLeft="218dp"
+            android:text="Reports"
             android:textSize="30sp"
             android:textStyle="bold" />
 

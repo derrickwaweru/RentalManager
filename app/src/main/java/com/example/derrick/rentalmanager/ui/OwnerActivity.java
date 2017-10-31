@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.example.derrick.rentalmanager.R;
 import com.example.derrick.rentalmanager.retrieving.ExpensesActivity;
+import com.example.derrick.rentalmanager.registration.Users;
 import com.example.derrick.rentalmanager.retrieving.ManagersActivity;
 import com.example.derrick.rentalmanager.retrieving.PropertyActivity;
 import com.example.derrick.rentalmanager.retrieving.ReportsActivity;
@@ -20,9 +21,9 @@ public class OwnerActivity extends AppCompatActivity implements View.OnClickList
     @Bind(R.id.ownerReportsImageView) ImageView mOwnerReports;
     @Bind(R.id.ownerTenantsImageView) ImageView mOwnerTenants;
     @Bind(R.id.ownerPropertyImageView) ImageView mOwnerProperty;
-    @Bind(R.id.ownerPaymentsImageView) ImageView mOwnerPayments;
     @Bind(R.id.ownerManagersImageView) ImageView mOwnerManagers;
     @Bind(R.id.ownerExpensesImageView) ImageView mOwnerExpensesImageView;
+    @Bind(R.id.chatImageView) ImageView mChatImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +36,10 @@ public class OwnerActivity extends AppCompatActivity implements View.OnClickList
         mOwnerReports.setOnClickListener(this);
         mOwnerTenants.setOnClickListener(this);
         mOwnerProperty.setOnClickListener(this);
-        mOwnerPayments.setOnClickListener(this);
         mOwnerManagers.setOnClickListener(this);
         mOwnerExpensesImageView.setOnClickListener(this);
 
+        mChatImageView.setOnClickListener(this);
     }
 
     @Override
@@ -65,5 +66,9 @@ public class OwnerActivity extends AppCompatActivity implements View.OnClickList
             startActivity(intent);
         }
         
+        if(v == mChatImageView) {
+            Intent intent = new Intent(OwnerActivity.this, Users.class);
+            startActivity(intent);
+        }
     }
 }

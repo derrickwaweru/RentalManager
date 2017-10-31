@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.example.derrick.rentalmanager.R;
 import com.example.derrick.rentalmanager.models.AddManager;
-import com.example.derrick.rentalmanager.ui.ManagerActivity;
+import com.example.derrick.rentalmanager.retrieving.ManagersActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -19,14 +19,16 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class AddManagerActivity extends AppCompatActivity implements View.OnClickListener{
-    @Bind(R.id.managerFirstName) EditText mManagerFirstName;
+    @Bind(R.id.managerFirstName)
+    EditText mManagerFirstName;
     @Bind(R.id.managerLastName) EditText mManagerLastName;
     @Bind(R.id.managerEmail) EditText mManagerEmail;
     @Bind(R.id.managerPhone) EditText mManagerPhone;
     @Bind(R.id.propertyManaged) EditText mPropertyManaged;
     @Bind(R.id.propertyManagedOwner) EditText mPropertyManagedOwner;
     @Bind(R.id.propertyManagedAddress) EditText mPropertyManagedAddress;
-    @Bind(R.id.addManagerBtn) Button mAddManagerBtn;
+    @Bind(R.id.addManagerBtn)
+    Button mAddManagerBtn;
 
     DatabaseReference databaseManagers;
 
@@ -80,7 +82,7 @@ public class AddManagerActivity extends AppCompatActivity implements View.OnClic
             Toast.makeText(this, "Please fill the form!", Toast.LENGTH_SHORT).show();
         }
 
-        Intent intent = new Intent(AddManagerActivity.this, ManagerActivity.class);
+        Intent intent = new Intent(AddManagerActivity.this, ManagersActivity.class);
         startActivity(intent);
     }
 }
