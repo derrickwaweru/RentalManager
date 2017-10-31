@@ -71,16 +71,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.derrick.rentalmanager.ui.OwnerActivity" />
         </activity>
-
         <activity android:name=".saving.AgentActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.derrick.rentalmanager.ui.HomeActivity" />
         </activity>
         <activity android:name=".ui.VacancyActivity" />
-        <activity android:name=".ui.PaymentActivity"></activity>
         <activity android:name=".chatting.Chat" />
-        <activity android:name=".chatting.Users"></activity>
+        <activity android:name=".chatting.Users" />
+        <activity android:name=".retrieving.PaymentActivity" />
+        <activity android:name=".saving.AddPaymentActivity" />
+        <activity android:name=".saving.AddExpensesActivity" />
+        <activity android:name=".retrieving.ExpensesActivity" />
+        <activity android:name=".saving.AddExpensesActivity" />
+        <activity android:name=".saving.AddExpensesActivity" />
     </application>
 
 </manifest>

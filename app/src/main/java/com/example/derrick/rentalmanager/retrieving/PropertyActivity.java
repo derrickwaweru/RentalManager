@@ -46,7 +46,7 @@ public class PropertyActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         //attaching value event listener
-        databaseProperties.addValueEventListener(new ValueEventListener() {
+        databaseProperties.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 

@@ -64,7 +64,7 @@ public class ManagersActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        databaseManagers.addValueEventListener(new ValueEventListener() {
+        databaseManagers.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 managers.clear();

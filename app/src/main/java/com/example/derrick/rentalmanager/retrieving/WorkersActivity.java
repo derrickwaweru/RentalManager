@@ -66,7 +66,7 @@ public class WorkersActivity extends AppCompatActivity {
         super.onStart();
 
         //attaching value event listener
-        databaseWorkers.addValueEventListener(new ValueEventListener() {
+        databaseWorkers.addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {

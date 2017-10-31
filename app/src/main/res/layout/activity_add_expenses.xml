@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.derrick.rentalmanager.saving.AddExpensesActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:text="Add an Expense"
+            android:textSize="30sp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel1"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/calendar"
+            android:id="@+id/calender"/>
+
+        <EditText
+            android:id="@+id/dateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/calender"
+            android:layout_marginTop="25dp"
+            android:hint="Date" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/calender"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/calendar"
+            android:id="@+id/calender2" />
+
+        <EditText
+            android:id="@+id/expenseTypeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/calender2"
+            android:layout_below="@+id/dateEditText"
+            android:layout_marginTop="30dp"
+            android:hint="Expense Type" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel2"
+        android:layout_below="@+id/rel1"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/financial"
+            android:id="@+id/report" />
+
+        <EditText
+            android:id="@+id/expenseDescriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/report"
+            android:layout_marginTop="10dp"
+            android:hint="Expense Description" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/report"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/financial"
+            android:id="@+id/report2" />
+
+        <EditText
+            android:id="@+id/expenseCostEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expenseDescriptionEditText"
+            android:layout_toRightOf="@+id/report2"
+            android:layout_marginTop="18dp"
+            android:hint="Expense Cost" />
+
+
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/submitExpensetBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:buttonColor="@color/colorAccent"
+            android:layout_below="@id/expenseCostEditText"
+            android:layout_marginTop="20dp"
+            android:text="Submit Expense"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:cornerRadius="4dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

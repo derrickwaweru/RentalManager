@@ -1,17 +1,17 @@
 package com.example.derrick.rentalmanager.retrieving;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.example.derrick.rentalmanager.R;
-import com.example.derrick.rentalmanager.models.AddReports;
-import com.example.derrick.rentalmanager.saving.AddReportsActivity;
-import com.example.derrick.rentalmanager.classes.ReportsList;
+import com.example.derrick.rentalmanager.classes.ExpensesList;
+import com.example.derrick.rentalmanager.models.AddExpenses;
+import com.example.derrick.rentalmanager.saving.AddExpensesActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,29 +24,29 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class ReportsActivity extends AppCompatActivity {
-    @Bind(R.id.listViewReports)
-    ListView mListViewReports;
+public class ExpensesActivity extends AppCompatActivity {
+    @Bind(R.id.listViewExpenses)
+    ListView mListViewExpenses;
 
-    DatabaseReference databaseReports;
-    List<AddReports> reports;
+    DatabaseReference databaseExpenses;
+    List<AddExpenses> expenses;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reports);
+        setContentView(R.layout.activity_expenses);
         ButterKnife.bind(this);
 
         Intent intent = getIntent();
 
-        reports = new ArrayList<>();
-        databaseReports = FirebaseDatabase.getInstance().getReference("reports");
+        expenses = new ArrayList<>();
+        databaseExpenses = FirebaseDatabase.getInstance().getReference("expenses");
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_add_reports, menu);
+        inflater.inflate(R.menu.menu_add_expenses, menu);
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -54,8 +54,8 @@ public class ReportsActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if(id == R.id.action_add_report) {
-            Intent intent = new Intent(ReportsActivity.this, AddReportsActivity.class);
+        if(id == R.id.action_add_expense) {
+            Intent intent = new Intent(ExpensesActivity.this, AddExpensesActivity.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
@@ -65,19 +65,19 @@ public class ReportsActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        databaseReports.addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseExpenses.addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                reports.clear();
+                expenses.clear();
 
                 for(DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    AddReports report = postSnapshot.getValue(AddReports.class);
-                    reports.add(report);
+                    AddExpenses expense = postSnapshot.getValue(AddExpenses.class);
+                    expenses.add(expense);
                 }
 
-                ReportsList reportsAdapter = new ReportsList(ReportsActivity.this, reports);
-                mListViewReports.setAdapter(reportsAdapter);
+                ExpensesList expensesAdapter = new ExpensesList(ExpensesActivity.this, expenses);
+                mListViewExpenses.setAdapter(expensesAdapter);
             }
 
             @Override
