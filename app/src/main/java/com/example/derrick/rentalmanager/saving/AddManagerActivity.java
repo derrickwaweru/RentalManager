@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.example.derrick.rentalmanager.R;
 import com.example.derrick.rentalmanager.models.AddManager;
-import com.example.derrick.rentalmanager.ui.ManagerActivity;
+import com.example.derrick.rentalmanager.retrieving.ManagersActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -82,7 +82,7 @@ public class AddManagerActivity extends AppCompatActivity implements View.OnClic
             Toast.makeText(this, "Please fill the form!", Toast.LENGTH_SHORT).show();
         }
 
-        Intent intent = new Intent(AddManagerActivity.this, ManagerActivity.class);
+        Intent intent = new Intent(AddManagerActivity.this, ManagersActivity.class);
         startActivity(intent);
     }
 }

@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.example.derrick.rentalmanager.R;
 import com.example.derrick.rentalmanager.models.AddOwner;
-import com.example.derrick.rentalmanager.ui.OwnerActivity;
+import com.example.derrick.rentalmanager.retrieving.OwnersActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -82,7 +82,7 @@ public class AddOwnerActivity extends AppCompatActivity implements View.OnClickL
         }
 
         //Once the form is filled, a new activity is started
-        Intent intent = new Intent(AddOwnerActivity.this, OwnerActivity.class);
+        Intent intent = new Intent(AddOwnerActivity.this, OwnersActivity.class);
         startActivity(intent);
     }
 
