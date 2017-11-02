@@ -9,7 +9,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:id="@+id/name"
-        android:text=" Name:"/>
+       />
 
     <TextView
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:id="@+id/phone"
-        android:text="Phone:"/>
+        />
 
     <TextView
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:id="@+id/propertyName"
-        android:text="PropertyName:"/>
+        />
 
     <TextView
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:id="@+id/vacancies"
-        android:text="Vacancy:"/>
+        />
 
     <TextView
         android:layout_width="match_parent"
@@ -41,7 +41,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:id="@+id/address"
-        android:text="Property Address:"/>
+        />
 
     <TextView
         android:layout_width="match_parent"
@@ -49,7 +49,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:id="@+id/rent"
-        android:text="Rent:"/>
+        />
 
 
 </LinearLayout>

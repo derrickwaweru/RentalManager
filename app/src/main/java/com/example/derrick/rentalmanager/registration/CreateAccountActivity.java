@@ -17,6 +17,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.derrick.rentalmanager.R;
+import com.example.derrick.rentalmanager.ui.HomeActivity;
 import com.firebase.client.Firebase;
 
 import org.json.JSONException;
@@ -44,7 +45,8 @@ public class CreateAccountActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CreateAccountActivity.this, LoginActivity.class));
+                startActivity(new Intent(CreateAccountActivity.this, HomeActivity.class));
+
             }
         });
 
