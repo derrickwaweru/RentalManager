@@ -5,85 +5,97 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
-
     tools:context="com.example.derrick.rentalmanager.ui.HomeActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Choose your category"
-        android:id="@+id/homeTextView"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose your category"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:id="@+id/homeTextView"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_centerHorizontal="true" />
 
-    <info.hoang8f.widget.FButton
-        android:id="@+id/managerButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_below="@+id/homeTextView"
-        android:text="MANAGER"
-        android:textColor="@android:color/black"
-        android:layout_marginTop="50dp"
-        app:buttonColor="@color/colorWhite"
-        app:cornerRadius="4dp" />
+        <info.hoang8f.widget.FButton
+            android:id="@+id/managerButton"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/homeTextView"
+            android:text="MANAGER"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:buttonColor="@color/colorWhite"
+            app:cornerRadius="15dp" />
 
 
-    <info.hoang8f.widget.FButton
-        android:id="@+id/ownerButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/managerButton"
-        android:layout_margin="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:text="OWNER"
-        android:textColor="@android:color/black"
-        app:buttonColor="@color/colorWhite"
-        app:cornerRadius="4dp" />
+        <info.hoang8f.widget.FButton
+            android:id="@+id/ownerButton"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/managerButton"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="OWNER"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:buttonColor="@color/colorWhite"
+            app:cornerRadius="15dp" />
 
-    <info.hoang8f.widget.FButton
-        android:id="@+id/tenantButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ownerButton"
-        android:layout_margin="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:text="TENANT"
-        android:textColor="@android:color/black"
-        app:buttonColor="@color/colorWhite"
-        app:cornerRadius="4dp" />
+        <info.hoang8f.widget.FButton
+            android:id="@+id/tenantButton"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/ownerButton"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="TENANT"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:buttonColor="@color/colorWhite"
+            app:cornerRadius="15dp" />
 
-    <info.hoang8f.widget.FButton
-        android:id="@+id/customerButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tenantButton"
-        android:layout_margin="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:text="CUSTOMER"
-        android:textColor="@android:color/black"
-        app:buttonColor="@color/colorWhite"
-        app:cornerRadius="4dp" />
+        <info.hoang8f.widget.FButton
+            android:id="@+id/customerButton"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/tenantButton"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="CUSTOMER"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:buttonColor="@color/colorWhite"
+            app:cornerRadius="15dp" />
 
-    <info.hoang8f.widget.FButton
-        android:id="@+id/agentButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/customerButton"
-        android:layout_margin="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:text="AGENT"
-        android:textColor="@android:color/black"
-        app:buttonColor="@color/colorWhite"
-        app:cornerRadius="4dp" />
+        <info.hoang8f.widget.FButton
+            android:id="@+id/agentButton"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/customerButton"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="AGENT"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:buttonColor="@color/colorWhite"
+            app:cornerRadius="15dp" />
+
 
 </RelativeLayout>
