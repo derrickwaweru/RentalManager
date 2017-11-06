@@ -80,12 +80,4 @@ public class AddWorkersActivity extends AppCompatActivity implements View.OnClic
         startActivity(intent);
     }
 
-    /*
-    private boolean fireWorker(String id) {
-        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("workers").child(id);
-        dR.removeValue();
-        Toast.makeText(getApplicationContext(), "Worker Fired!", Toast.LENGTH_SHORT).show();
-        return true;
-    }
-    */
 }
