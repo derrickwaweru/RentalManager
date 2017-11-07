@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.derrick.rentalmanager.ui.ManagerActivity"
-    android:background="@color/background">
+    android:background="@drawable/nature">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -24,6 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Chat"
+            android:textColor="@color/colorWhite"
             android:layout_below="@+id/chatImageView"
             android:layout_marginLeft="40dp"
             android:textSize="30sp"
@@ -41,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tenants"
+            android:textColor="@color/colorWhite"
             android:textSize="30sp"
             android:textStyle="bold"
             android:layout_below="@+id/managerTenants"
@@ -66,6 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Workers"
+            android:textColor="@color/colorWhite"
             android:layout_below="@+id/workersImageView"
             android:layout_marginLeft="20dp"
             android:textSize="30sp"
@@ -85,6 +88,7 @@
             android:layout_below="@+id/managerReportsImageView"
             android:layout_marginLeft="218dp"
             android:text="Reports"
+            android:textColor="@color/colorWhite"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -109,6 +113,7 @@
             android:layout_below="@+id/managerOwnersImageView"
             android:layout_marginLeft="20dp"
             android:text="Owners"
+            android:textColor="@color/colorWhite"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -127,6 +132,7 @@
             android:layout_below="@+id/managerExpensesImageView"
             android:layout_marginLeft="215dp"
             android:text="Expenses"
+            android:textColor="@color/colorWhite"
             android:textSize="30sp"
             android:textStyle="bold" />
 
